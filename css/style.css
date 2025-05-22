@@ -187,3 +187,51 @@ header .menu .navi {
   background-color: #ff1cc1;
   transform: rotate(180deg);
 }
+.con01 .cross {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+.con01 .cross .lineX {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.con01 .cross .lineX li {
+  width: calc(100% / 2 - 1rem);
+  height: 100%;
+  background-color: #00b2ff;
+  border-radius: 5rem;
+}
+.con01 .cross .lineY {
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.con01 .cross .lineY li {
+  width: 100%;
+  height: calc(100% / 2 - 1rem);
+  background-color: #00b2ff;
+  border-radius: 5rem;
+}
+.con01 .cross.one {
+  right: 15rem;
+  top: 15rem;
+}
+.con01 .cross.two {
+  left: 30rem;
+  bottom: 10rem;
+  transform: rotate(45deg);
+}
+.con01 .cross.two li {
+  background-color: #f8ff24;
+}
