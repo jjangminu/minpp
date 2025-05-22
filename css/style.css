@@ -1,0 +1,189 @@
+/*logo font*/
+@font-face {
+  font-family: "Cafe24Oneprettynight";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*기본설정*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+html,
+body {
+  background-color: #1a1a1a;
+  color: #fffbc5;
+  overflow-x: hidden;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0px;
+}
+/*header logo*/
+header .logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Cafe24Oneprettynight";
+  font-weight: normal;
+}
+header .logo img {
+  width: 50px;
+}
+/*header bar*/
+header .bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+}
+header .bar li {
+  width: 100%;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: #fffbc5;
+}
+/*header menu*/
+header .menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(57, 57, 57, 0.315);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+/*header navi*/
+header .menu .navi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 3rem;
+  border-right: 1px solid #fffbc5;
+  border-left: 1px solid #fffbc5;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.con01 {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
+.con01 > div {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.con01 .right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.con01 h2 {
+  font-size: 5rem;
+}
+.con01 .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.con01 .circle2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50% 0 50% 50%;
+}
+
+.con01 .top .right {
+  width: 850px;
+  justify-content: end;
+}
+.con01 .top h2 {
+  background-color: #78ff43;
+  color: #1a1a1a;
+  border-radius: 5rem;
+  padding: 1rem 3rem;
+  position: absolute;
+  width: 670px;
+  text-align: center;
+  left: 0;
+}
+.con01 .top .circle {
+  background-color: #ff1cc1;
+  position: absolute;
+  right: -10rem;
+}
+.con01 .top .circle2 {
+  background-color: #f8ff24;
+}
+
+.con01 .middle {
+  justify-content: center;
+}
+.con01 .middle h2 {
+  font-size: 7rem;
+  text-align: center;
+}
+.con01 .middle div:first-child {
+  background-color: #f8ff24;
+  position: absolute;
+  left: -8rem;
+}
+.con01 .middle div:last-child {
+  background-color: #78ff43;
+  position: absolute;
+  right: -8rem;
+}
+.con01 .bottom h2 {
+  background-color: #ff1cc1;
+  color: #1a1a1a;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+}
+.con01 .bottom .right {
+  width: 250px;
+}
+.con01 .bottom .circle {
+  background-color: #00b2ff;
+  position: absolute;
+  right: 0px;
+}
+.con01 .bottom .circle2 {
+  background-color: #ff1cc1;
+  transform: rotate(180deg);
+}
