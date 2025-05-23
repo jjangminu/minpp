@@ -457,7 +457,8 @@ header .menu .navi {
   border-radius: 50% 0 50% 50%;
   background-color: #78ff43;
   position: absolute;
-  right: 20rem;
+  right: 15rem;
+  top: 17rem;
   transform: rotate(180deg);
 }
 
