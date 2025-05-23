@@ -522,10 +522,28 @@ header .menu .navi {
   width: 100%;
   height: 100vh;
 }
-
+.con05 .txtWrap {
+  color: #ff1cc1;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.con05 .txtWrap h2 {
+  font-size: 5rem;
+}
+img {
+  width: 150px;
+}
 .con06 {
   width: 100%;
   height: 100vh;
+}
+.con06 .txtWrap {
+  color: #f8ff24;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.con06 .txtWrap h2 {
+  font-size: 5rem;
 }
 
 .con09 {
