@@ -429,3 +429,24 @@ header .menu .navi {
   background-color: #00b2ff;
   border-radius: 5rem;
 }
+.con03 .cross.one {
+  left: 7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.con03 .cross.one li {
+  background-color: #78ff43;
+}
+.con03 .cross.two {
+  left: 20rem;
+  bottom: 10rem;
+  transform: rotate(45deg);
+}
+.con03 .cross.three {
+  top: -3rem;
+  right: 15rem;
+  transform: rotate(45deg) scale(0.8);
+}
+.con03 .cross.three li {
+  background-color: #ff1cc1;
+}
