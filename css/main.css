@@ -469,7 +469,7 @@ section {
   right: 15%;
   top: 15%;
   animation: rot6 1s linear;
-  animation-delay: 6.8s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -478,7 +478,7 @@ section {
   bottom: 10%;
   transform: rotate(45deg);
   animation: rot7 1s linear;
-  animation-delay: 7.5s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -643,7 +643,7 @@ section {
 }
 .vision .top,
 .vision .bottom {
-  background-color: #00b2ff;
+  background-color: #6499e9;
   color: #1a1a1a;
 }
 /*vision top*/
@@ -653,6 +653,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-radius: 5rem 5rem 0 0;
 }
 .vision .top h2 {
   font-size: 6vw;
@@ -663,25 +664,42 @@ section {
   height: 50%;
   position: relative;
 }
+.vision .middle .wrap {
+  width: 100%;
+  height: 70%;
+  top: 20%;
+  position: absolute;
+}
+.vision .middle .lineWrap {
+  height: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .vision .middle .line {
   width: 100%;
   height: 1px;
-  background-color: #bebebe;
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  background-color: #f9f9f9;
 }
-.vision .middle .wrap {
+.vision .middle .detail {
   display: flex;
-  justify-content: space-between;
   position: absolute;
-  top: 58%;
-  transform: translateY(-50%);
+  justify-content: space-between;
+  top: 0px;
 }
-.vision .middle .now,
-.vision .middle .future {
-  width: 25%;
-  text-align: center;
+.vision .middle .wrap h2 {
+  height: 8vw;
+  border-radius: 5rem;
+  line-height: 8vw;
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  color: #1a1a1a;
+}
+.vision .middle .now h2 {
+  background-color: #ff008e;
+}
+.vision .middle .future h2 {
+  background-color: #1eae98;
 }
 .vision .middle .now p,
 .vision .middle .future p {
@@ -690,28 +708,19 @@ section {
   font-size: 14px;
 }
 .vision .middle .now span {
-  color: #ff1cc1;
+  color: #ff008e;
   font-weight: bold;
   font-size: 1.1rem;
 }
 .vision .middle .future span {
-  color: #78ff43;
+  color: #1eae98;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.vision .middle .wrap h2 {
-  height: 100px;
-  border-radius: 5rem;
-  line-height: 100px;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  color: #1a1a1a;
-}
-.vision .middle .now h2 {
-  background-color: #ff1cc1;
-}
-.vision .middle .future h2 {
-  background-color: #78ff43;
+.vision .middle .now,
+.vision .middle .future {
+  width: 25%;
+  text-align: center;
 }
 /*vision circle*/
 .vision .middle .circleL,
@@ -723,19 +732,19 @@ section {
   height: 8vw;
 }
 .vision .center {
-  background-color: #f8ff24;
+  background-color: #faef5d;
 }
 .vision .circleL div:first-child {
-  background-color: #00b2ff;
+  background-color: #1eae98;
 }
 .vision .circleL div:last-child {
-  background-color: #78ff43;
+  background-color: #f9f9f9;
 }
 .vision .circleR div:first-child {
-  background-color: #ff1cc1;
+  background-color: #6499e9;
 }
 .vision .circleR div:last-child {
-  background-color: #fffbc5;
+  background-color: #ff008e;
 }
 /*vision bottom*/
 .vision .bottom {
@@ -743,7 +752,11 @@ section {
   box-sizing: border-box;
   padding: 2rem 1rem;
   text-align: center;
-  font-family: "twaysky";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .vision .bottom h2 {
   font-size: 5vw;
@@ -752,10 +765,12 @@ section {
   width: 80%;
   height: 1px;
   background-color: #1a1a1a;
-  margin: 1rem auto;
+  margin: 0rem auto;
 }
 .vision .bottom p {
   line-height: 1.5;
+  width: 80%;
+  margin: 0px auto;
 }
 
 @media (max-width: 800px) {
