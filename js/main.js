@@ -109,25 +109,91 @@ $(" .fix_menu li").on("click", function () {
 var tl = gsap.timeline();
 
 //visual pinSpacing
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".visual",
-    start: "",
-    end: "",
-    scrub: 2,
-    pin: true,
-    pinSpacing: false,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".visual",
+      start: "",
+      end: "",
+      scrub: 2,
+      pin: true,
+      pinSpacing: false,
+    },
+  })
+  .fromTo(
+    ".vision .top",
+    { opacity: 0, backgroundColor: "#1a1a1a" },
+    { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
+  )
+  .fromTo(
+    ".vision .bottom",
+    { opacity: 0, backgroundColor: "#1a1a1a" },
+    { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
+  );
 
 //vision
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".vision",
-    start: "top top",
-    end: "bottom 50%",
-    scrub: 2,
-    pin: true,
-    markers: true,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".vision",
+      start: "top top",
+      end: "bottom 20%",
+      scrub: 2,
+      pin: true,
+      markers: true,
+    },
+  })
+  .fromTo(
+    ".vision .circleL .one",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".vision .circleL .two",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".vision .now",
+    {
+      opacity: 0,
+    },
+    { opacity: 1, duration: 5 }
+  )
+  .fromTo(
+    ".vision .circle.center",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".vision .future",
+    {
+      opacity: 0,
+    },
+    { opacity: 1, duration: 5 }
+  )
+  .fromTo(
+    ".vision .circleR .one",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".vision .circleR .two",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  );

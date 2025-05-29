@@ -469,7 +469,7 @@ section {
   right: 15%;
   top: 15%;
   animation: rot6 1s linear;
-  animation-delay: 6.8s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -478,7 +478,7 @@ section {
   bottom: 10%;
   transform: rotate(45deg);
   animation: rot7 1s linear;
-  animation-delay: 7.5s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -641,79 +641,95 @@ section {
   z-index: 12;
   background-color: #1a1a1a;
 }
+.vision .top br {
+  display: none;
+}
 .vision .top,
 .vision .bottom {
-  background-color: #00b2ff;
+  background-color: #6499e9;
   color: #1a1a1a;
 }
-/*vision top*/
+/* vision top */
 .vision .top {
   height: 20%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-radius: 5rem 5rem 0 0;
 }
 .vision .top h2 {
   font-size: 6vw;
   font-family: "LOTTERIADDAG";
 }
-/*vision middle*/
+/* vision middle */
 .vision .middle {
   height: 50%;
   position: relative;
 }
+.vision .middle .wrap {
+  width: 100%;
+  height: 70%;
+  top: 20%;
+  position: absolute;
+}
+/* vision line */
+.vision .middle .lineWrap {
+  height: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .vision .middle .line {
   width: 100%;
   height: 1px;
-  background-color: #bebebe;
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  background-color: #f9f9f9;
 }
-.vision .middle .wrap {
+/* vision detail */
+.vision .middle .detail {
   display: flex;
-  justify-content: space-between;
   position: absolute;
-  top: 58%;
-  transform: translateY(-50%);
+  justify-content: space-between;
+  top: 0px;
+}
+.vision .middle .wrap h2 {
+  height: 8vw;
+  border-radius: 5rem;
+  line-height: 8vw;
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  color: #1a1a1a;
+}
+.vision .middle .now h2 {
+  background-color: #ff008e;
+}
+.vision .middle .future h2 {
+  background-color: #1eae98;
+}
+.vision .middle .now p,
+.vision .middle .future p {
+  line-height: 1.7;
+  height: 144px;
+  font-size: 14px;
+}
+.vision .middle span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.vision .middle .now span {
+  color: #ff008e;
+}
+.vision .middle .future span {
+  color: #1eae98;
 }
 .vision .middle .now,
 .vision .middle .future {
   width: 25%;
   text-align: center;
 }
-.vision .middle .now p,
-.vision .middle .future p {
-  line-height: 2;
-  height: 144px;
-  font-size: 14px;
-}
-.vision .middle .now span {
-  color: #ff1cc1;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.vision .middle .future span {
-  color: #78ff43;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-.vision .middle .wrap h2 {
-  height: 100px;
-  border-radius: 5rem;
-  line-height: 100px;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  color: #1a1a1a;
-}
-.vision .middle .now h2 {
-  background-color: #ff1cc1;
-}
-.vision .middle .future h2 {
-  background-color: #78ff43;
-}
-/*vision circle*/
+/* vision circle */
 .vision .middle .circleL,
 .vision .middle .circleR {
   display: flex;
@@ -723,27 +739,31 @@ section {
   height: 8vw;
 }
 .vision .center {
-  background-color: #f8ff24;
+  background-color: #faef5d;
 }
 .vision .circleL div:first-child {
-  background-color: #00b2ff;
+  background-color: #1eae98;
 }
 .vision .circleL div:last-child {
-  background-color: #78ff43;
+  background-color: #f9f9f9;
 }
 .vision .circleR div:first-child {
-  background-color: #ff1cc1;
+  background-color: #6499e9;
 }
 .vision .circleR div:last-child {
-  background-color: #fffbc5;
+  background-color: #ff008e;
 }
-/*vision bottom*/
+/* vision bottom */
 .vision .bottom {
   height: 30%;
   box-sizing: border-box;
   padding: 2rem 1rem;
   text-align: center;
-  font-family: "twaysky";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .vision .bottom h2 {
   font-size: 5vw;
@@ -752,10 +772,12 @@ section {
   width: 80%;
   height: 1px;
   background-color: #1a1a1a;
-  margin: 1rem auto;
+  margin: 0rem auto;
 }
 .vision .bottom p {
   line-height: 1.5;
+  width: 80%;
+  margin: 0px auto;
 }
 
 @media (max-width: 800px) {
@@ -872,6 +894,32 @@ section {
   /* visual bottom */
   .visual .bottom .right {
     width: 30%;
+  }
+
+  /* vision */
+  .vision .top br {
+    display: block;
+  }
+  /* vision middle */
+  .vision .middle .wrap h2 {
+    margin-bottom: 0.5rem;
+  }
+  .vision .middle .now p,
+  .vision .middle .future p {
+    line-height: 1.6;
+    height: 144px;
+    font-size: 1.7vw;
+  }
+  .vision .middle span {
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  /* vision bottom */
+  .vision .bottom p {
+    line-height: 1.5;
+    width: 80%;
+    margin: 0px auto;
+    font-size: 2vw;
   }
 }
 
