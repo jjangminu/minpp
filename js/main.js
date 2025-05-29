@@ -194,6 +194,14 @@ gsap
       scale: 0,
     },
     { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".vision .middle .line",
+    {
+      width: "0px",
+    },
+    { width: "100%", duration: 25 },
+    0
   );
 
 //aboutMe
@@ -259,3 +267,14 @@ gsap
     },
     { opacity: 1, scale: 1, duration: 3 }
   );
+
+//codingHard
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingHard",
+    start: "top top",
+    end: "bottom 20%",
+    scrub: 2,
+    pin: true,
+  },
+});
