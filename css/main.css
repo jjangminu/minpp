@@ -866,6 +866,11 @@ section {
   bottom: 32rem;
   z-index: 5;
 }
+
+/* skills */
+.skills {
+  height: 40vh;
+}
 .skills > div {
   height: 50%;
   position: relative;
@@ -968,9 +973,18 @@ section {
   }
 }
 
-/* skills */
-.skills {
-  height: 40vh;
+/* codingHard */
+.codingHard {
+  position: relative;
+}
+/* codingHard txt */
+.codingHard .left .txtWrap {
+  color: #ff1cc1;
+  font-size: 3vw;
+  padding: 5rem 0 0 5rem;
+}
+.codingHard .left h2 {
+  font-size: 6vw;
 }
 
 @media (max-width: 800px) {
@@ -1142,8 +1156,6 @@ section {
 
 @media (max-width: 500px) {
   /* header top */
-  body {
-  }
   header .top {
     padding: 1rem 1rem;
   }
