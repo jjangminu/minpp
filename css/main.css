@@ -52,6 +52,9 @@ body {
 .hidden {
   overflow: hidden;
 }
+.xhidden {
+  overflow-x: hidden;
+}
 body::after {
   position: fixed;
   top: 0;
