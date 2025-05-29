@@ -28,7 +28,7 @@ $("header .bar").on("click", function () {
   windowX = window.innerWidth;
   $("header .menu_circle").toggleClass("on");
   $("body").toggleClass("hidden");
-  $("body").css("overflow-x", "hidden");
+  $("body").toggleClass("xhidden");
   $("header .menu").fadeToggle(500);
   $("header .bar li").toggleClass("on");
   if (windowX >= 800) {
@@ -45,7 +45,6 @@ $("header h1").on("click", function () {
 //현재 스크롤 위치 class
 $(window).on("scroll", function () {
   var scr = $(this).scrollTop();
-  $("body").css("overflow-x", "hidden");
   if (scr >= visual && scr < vision) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
