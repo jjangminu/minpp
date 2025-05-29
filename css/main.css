@@ -1142,8 +1142,6 @@ section {
 
 @media (max-width: 500px) {
   /* header top */
-  body {
-  }
   header .top {
     padding: 1rem 1rem;
   }
