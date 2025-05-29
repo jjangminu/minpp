@@ -71,7 +71,7 @@ $(window).on("scroll", function () {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .menu li").eq(4).addClass("on");
-  } else if (scr >= contact - 50) {
+  } else if (scr >= contact) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(5).addClass("on");
@@ -140,7 +140,6 @@ gsap
       end: "bottom 20%",
       scrub: 2,
       pin: true,
-      markers: true,
     },
   })
   .fromTo(
@@ -191,6 +190,69 @@ gsap
   )
   .fromTo(
     ".vision .circleR .two",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  );
+
+//aboutMe
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".aboutMe",
+      start: "top top",
+      end: "bottom 20%",
+      scrub: 2,
+      pin: true,
+    },
+  })
+  .fromTo(
+    ".aboutMe .cross.one ",
+    {
+      opacity: 0,
+      scale: 0,
+      x: -500,
+    },
+    { opacity: 1, scale: 1, rotation: 360, duration: 3, x: 0 }
+  )
+  .fromTo(
+    ".aboutMe .cross.two ",
+    {
+      opacity: 0,
+      scale: 0,
+      x: 500,
+    },
+    { opacity: 1, scale: 1, duration: 3, x: 0, rotation: 360 }
+  )
+  .fromTo(
+    ".aboutMe .cross.three ",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    { opacity: 1, scale: 1, duration: 3 }
+  )
+  .fromTo(
+    ".aboutMe h2 ",
+    {
+      opacity: 0,
+      y: -500,
+    },
+    { opacity: 1, duration: 5, y: 0 }
+  )
+  .fromTo(
+    ".aboutMe .card ",
+    {
+      opacity: 0,
+      scale: 0,
+      y: 5000,
+    },
+    { opacity: 1, scale: 1, duration: 10, y: 0 }
+  )
+  .fromTo(
+    ".aboutMe .circle2 ",
     {
       opacity: 0,
       scale: 0,

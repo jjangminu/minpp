@@ -52,6 +52,18 @@ body {
 .hidden {
   overflow: hidden;
 }
+body::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../source/index/overlay.gif);
+  content: "";
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.05;
+}
 
 /* header top */
 header .top {
@@ -780,6 +792,182 @@ section {
   margin: 0px auto;
 }
 
+/* aboutMe */
+.aboutMe {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+}
+.aboutMe h2 {
+  font-size: 9vw;
+  padding: 5rem 0 0 5rem;
+}
+/* aboutMe card */
+.aboutMe .cardWrap {
+  width: 93%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.aboutMe .card {
+  background-color: #f8ff24;
+  color: #1a1a1a;
+  width: 60vw;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+  bottom: 0;
+  right: 1rem;
+  box-sizing: border-box;
+  padding: 4.5rem 3rem;
+  font-size: 2.2vw;
+}
+.aboutMe .card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+/* aboutMe cross, circle2 */
+.aboutMe .cross.one {
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.aboutMe .cross.one li {
+  background-color: #78ff43;
+}
+.aboutMe .cross.two {
+  left: 20%;
+  bottom: 10%;
+  transform: rotate(45deg);
+}
+.aboutMe .cross.three {
+  top: -5%;
+  right: 15%;
+  transform: rotate(45deg) scale(0.8);
+}
+.aboutMe .cross.three li {
+  background-color: #ff1cc1;
+}
+.aboutMe .circle2 {
+  background-color: #78ff43;
+  position: absolute;
+  right: 15%;
+  top: -10%;
+  transform: rotate(180deg);
+}
+.skills > div {
+  height: 50%;
+  position: relative;
+  width: 100%;
+}
+.skills .line {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.skills ul {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  top: 30%;
+  z-index: 2;
+}
+.skills li {
+  width: 210px;
+  text-align: center;
+  padding: 1.5vw 0vw;
+  font-size: 2.5vw;
+  background-color: #6499e9;
+  border-radius: 5rem;
+  color: #1a1a1a;
+}
+.skills .top .wrap01 {
+  animation: aniScroll 15s linear infinite;
+}
+.skills .top .wrap02 {
+  animation: aniScroll_1 15s linear infinite;
+}
+.skills .bottom .wrap01 {
+  animation: aniScroll_3 15s linear infinite;
+}
+.skills .bottom .wrap02 {
+  animation: aniScroll_4 15s linear infinite;
+}
+.skills .top li:nth-child(1) {
+  background-color: #ff008e;
+}
+.skills .top li:nth-child(2) {
+  background-color: #1eae98;
+}
+.skills .top li:nth-child(4) {
+  background-color: #faef5d;
+}
+.skills .top li:nth-child(5) {
+  background-color: #f9f9f9;
+}
+.skills .bottom li:nth-child(1) {
+  background-color: #faef5d;
+}
+.skills .bottom li:nth-child(2) {
+  background-color: #f9f9f9;
+}
+.skills .bottom li:nth-child(3) {
+  background-color: #ff008e;
+}
+.skills .bottom li:nth-child(4) {
+  background-color: #1eae98;
+}
+@keyframes aniScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes aniScroll_1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes aniScroll_3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes aniScroll_4 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* skills */
+.skills {
+  height: 40vh;
+}
+
 @media (max-width: 800px) {
   /* header top */
   header .top {
@@ -920,6 +1108,30 @@ section {
     width: 80%;
     margin: 0px auto;
     font-size: 2vw;
+  }
+
+  /* aboutme */
+  .aboutMe br {
+    display: none;
+  }
+  .aboutMe h2 {
+    font-size: 8vw;
+    text-align: center;
+    padding: 7rem 0 0 0;
+  }
+  .aboutMe .card {
+    gap: 0.5rem;
+    font-size: 3vw;
+    width: 100%;
+    right: 7%;
+  }
+  .aboutMe .cross.one {
+    left: 5%;
+    top: 18%;
+  }
+  .aboutMe .cross.two {
+    left: 35%;
+    top: 25%;
   }
 }
 
