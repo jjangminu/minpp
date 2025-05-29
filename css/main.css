@@ -798,10 +798,9 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  overflow: hidden;
 }
 .aboutMe h2 {
-  font-size: 9vw;
+  font-size: 8vw;
   padding: 5rem 0 0 5rem;
 }
 /* aboutMe card */
@@ -823,8 +822,10 @@ section {
   bottom: 0;
   right: 1rem;
   box-sizing: border-box;
-  padding: 4.5rem 3rem;
-  font-size: 2.2vw;
+  padding: 5vw 3vw;
+  font-size: 2vw;
+  position: absolute;
+  bottom: 0;
 }
 .aboutMe .card ul {
   display: flex;
@@ -858,8 +859,9 @@ section {
   background-color: #78ff43;
   position: absolute;
   right: 15%;
-  top: -10%;
   transform: rotate(180deg);
+  bottom: 32rem;
+  z-index: 5;
 }
 .skills > div {
   height: 50%;
@@ -885,7 +887,7 @@ section {
   z-index: 2;
 }
 .skills li {
-  width: 210px;
+  width: 25vw;
   text-align: center;
   padding: 1.5vw 0vw;
   font-size: 2.5vw;

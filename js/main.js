@@ -222,9 +222,10 @@ gsap
     {
       opacity: 0,
       scale: 0,
+      rotation: 360,
       x: 500,
     },
-    { opacity: 1, scale: 1, duration: 3, x: 0, rotation: 360 }
+    { opacity: 1, scale: 1, duration: 3, x: 0, rotation: 45 }
   )
   .fromTo(
     ".aboutMe .cross.three ",
