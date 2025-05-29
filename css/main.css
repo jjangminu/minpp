@@ -641,12 +641,15 @@ section {
   z-index: 12;
   background-color: #1a1a1a;
 }
+.vision .top br {
+  display: none;
+}
 .vision .top,
 .vision .bottom {
   background-color: #6499e9;
   color: #1a1a1a;
 }
-/*vision top*/
+/* vision top */
 .vision .top {
   height: 20%;
   text-align: center;
@@ -659,7 +662,7 @@ section {
   font-size: 6vw;
   font-family: "LOTTERIADDAG";
 }
-/*vision middle*/
+/* vision middle */
 .vision .middle {
   height: 50%;
   position: relative;
@@ -670,6 +673,7 @@ section {
   top: 20%;
   position: absolute;
 }
+/* vision line */
 .vision .middle .lineWrap {
   height: 8vw;
   display: flex;
@@ -681,6 +685,7 @@ section {
   height: 1px;
   background-color: #f9f9f9;
 }
+/* vision detail */
 .vision .middle .detail {
   display: flex;
   position: absolute;
@@ -703,26 +708,28 @@ section {
 }
 .vision .middle .now p,
 .vision .middle .future p {
-  line-height: 2;
+  line-height: 1.7;
   height: 144px;
   font-size: 14px;
 }
-.vision .middle .now span {
-  color: #ff008e;
+.vision .middle span {
   font-weight: bold;
   font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.vision .middle .now span {
+  color: #ff008e;
 }
 .vision .middle .future span {
   color: #1eae98;
-  font-weight: bold;
-  font-size: 1.1rem;
 }
 .vision .middle .now,
 .vision .middle .future {
   width: 25%;
   text-align: center;
 }
-/*vision circle*/
+/* vision circle */
 .vision .middle .circleL,
 .vision .middle .circleR {
   display: flex;
@@ -746,7 +753,7 @@ section {
 .vision .circleR div:last-child {
   background-color: #ff008e;
 }
-/*vision bottom*/
+/* vision bottom */
 .vision .bottom {
   height: 30%;
   box-sizing: border-box;
@@ -887,6 +894,32 @@ section {
   /* visual bottom */
   .visual .bottom .right {
     width: 30%;
+  }
+
+  /* vision */
+  .vision .top br {
+    display: block;
+  }
+  /* vision middle */
+  .vision .middle .wrap h2 {
+    margin-bottom: 0.5rem;
+  }
+  .vision .middle .now p,
+  .vision .middle .future p {
+    line-height: 1.6;
+    height: 144px;
+    font-size: 1.7vw;
+  }
+  .vision .middle span {
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  /* vision bottom */
+  .vision .bottom p {
+    line-height: 1.5;
+    width: 80%;
+    margin: 0px auto;
+    font-size: 2vw;
   }
 }
 
