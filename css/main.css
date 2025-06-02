@@ -973,14 +973,27 @@ section {
 
 /* codingHard */
 .codingHard {
-  position: relative;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  box-sizing: border-box;
+  align-items: center;
 }
 .codingHard > div {
-  width: calc(100% / 2 - 1rem);
-  padding: 2rem;
+  width: calc(100% / 2 - 2rem);
   box-sizing: border-box;
+  padding: 2rem 0;
+  height: 95%;
+}
+.codingHard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.codingHard img:hover {
+  transform: scale(1.2);
 }
 /* codingHard left */
 .codingHard .left {
@@ -997,7 +1010,7 @@ section {
   font-size: 6vw;
 }
 .codingHard .left ul {
-  height: 70%;
+  height: 80%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1010,11 +1023,69 @@ section {
   height: calc(100% / 2 - 1rem);
   border-radius: 1rem;
   overflow: hidden;
+  border: 2px dashed #ff008e;
+  box-sizing: border-box;
 }
-.codingHard .left ul li img {
-  width: 100%;
+/* codingHard right */
+.codingHard .right {
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.codingHard .right .imgWrap {
+  height: 75%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px dashed #ff008e;
+  box-sizing: border-box;
+}
+.codingHard .right .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  border: 2px dashed #ff008e;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.codingHard .right .detail .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1vw;
+}
+.codingHard .right .detail .wrap h4 {
+  font-size: 3vw;
+}
+.codingHard .right .detail ul {
+  display: flex;
+  gap: 0.5rem;
+}
+.codingHard .right .detail ul li {
+  border-radius: 5rem;
+  border: 1px solid #f9f9f9;
+  overflow: hidden;
+  height: 3vw;
+  line-height: 3vw;
+  width: 8vw;
+  text-align: center;
+  font-size: 1.2vw;
+}
+.codingHard .right .detail ul li a {
+  display: block;
+  transition: 0.5s;
+}
+.codingHard .right .detail ul li a:hover {
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+}
+.codingHard .two,
+.codingHard .three {
+  display: none;
 }
 
 /* aboutMe */
