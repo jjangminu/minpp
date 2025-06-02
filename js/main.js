@@ -264,6 +264,7 @@ gsap
     {
       opacity: 0,
       scale: 0,
+      y: "-450%",
     },
     { opacity: 1, scale: 1, duration: 3 }
   );
@@ -278,3 +279,34 @@ gsap.timeline({
     pin: true,
   },
 });
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".contact",
+      start: "top 80%",
+      end: "top top",
+      scrub: 2,
+      markers: true,
+    },
+  })
+  .fromTo(
+    ".contact .top h2",
+    { opacity: 0, x: -500 },
+    { opacity: 1, x: 0, duration: 2 }
+  )
+  .fromTo(
+    ".contact .top .cross",
+    { rotation: 0, opacity: 0 },
+    { rotation: 180, opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".contact .bottom .cross",
+    { rotation: 0, opacity: 0, x: -200, y: -200 },
+    { rotation: 135, opacity: 1, x: 0, y: 0, duration: 2 }
+  )
+  .fromTo(
+    ".contact .bottom .txt",
+    { opacity: 0, x: 500 },
+    { opacity: 1, x: 0, duration: 2 }
+  );
