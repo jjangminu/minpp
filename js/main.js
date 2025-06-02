@@ -579,6 +579,28 @@ $(".codingClone .back").on("click", function () {
   timerC();
 });
 
+//project
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".project",
+    start: "top top",
+    end: "bottom top",
+    scrub: 2,
+    pin: true,
+  },
+});
+
+//design
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".design",
+    start: "top top",
+    end: "bottom top",
+    scrub: 2,
+    pin: true,
+  },
+});
+
 //contact
 gsap
   .timeline({
