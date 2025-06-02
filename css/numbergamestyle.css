@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "DungGeunMo";
+}
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+#form {
+  margin: 1rem auto;
+  border: 5px dashed gray;
+  border-radius: 1rem;
+  padding: 1.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  font-size: 3rem;
+}
+img {
+  margin: 1rem auto;
+}
+.screen {
+  display: flex;
+  justify-content: center;
+}
+.num {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0rem;
+}
+Input {
+  margin-right: 1rem;
+}
+.inputScr {
+  background-color: rgb(10, 10, 10);
+  text-align: center;
+  padding: 1rem;
+  border: 1px dashed gray;
+}
+.home {
+  margin: 1rem;
+}
+#answer {
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+  #form {
+    width: 90%;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 90%;
+  }
+  #answer {
+    font-size: 1.2rem;
+  }
+  .screen {
+    gap: 0rem;
+    flex-direction: column;
+  }
+  .screen > div {
+    font-size: 1rem;
+  }
+  .num {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .form-control {
+    width: 90%;
+    margin: 0px;
+  }
+  .inputScr {
+    width: 90%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  #form {
+    width: 90%;
+  }
+  img {
+    width: 90%;
+  }
+  .screen {
+    gap: 3rem;
+  }
+  .screen > div {
+    font-size: 1.2rem;
+  }
+  .form-control {
+    width: 280px;
+  }
+  .inputScr {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #form {
+    width: 1000px;
+  }
+  img {
+    width: 700px;
+  }
+  .screen {
+    gap: 5rem;
+  }
+  .screen > div {
+    font-size: 1.5rem;
+  }
+  .form-control {
+    width: 300px;
+  }
+  .inputScr {
+    width: 450px;
+  }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/weatherstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- video -->
+    <video
+      class="video"
+      src="source/weather_source/weather_bg.mp4"
+      autoplay
+      loop
+      muted
+    ></video>
+
+    <!--뒤로가기-->
+    <div class="home">
+      <a href="index.html"><i class="fa-solid fa-angles-left"></i>뒤로가기</a>
+    </div>
+
+    <div class="wrap">
+      <div class="weather_news">
+        <div class="month_weather">
+          <h3>May Forecast</h3>
+          ☀ 평년기온 17.0~17.6<br />🌧 평년강수 75.1~115.0mm<br />동인도양과
+          북인도양의 높은 해수면온도로 인해 우리나라 동쪽을 중심으로 고기압성
+          순환이 형성되어 기온이 상승하고 강수량이 많아질 가능성이 있으나,
+          동유럽의 적은 눈덮임으로 인해 강수량이 감소할 가능성도 있겠습니다.
+          (월평균기온) 평년(17.0~17.6℃)보다 높을 확률이 50%입니다. (월강수량)
+          평년(75.1~115.0㎜)과 비슷할 확률이 50%입니다.
+        </div>
+
+        <div class="calendar_wrap">
+          <header>
+            <div class="nav">
+              <button class="left">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <h3 class="current-date">April 2025</h3>
+              <button class="right">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </header>
+          <div class="calendar">
+            <ul class="weeks">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
+            <ul class="days">
+              <li class="inactive">27</li>
+              <li class="inactive">28</li>
+              <li class="inactive">29</li>
+              <li class="inactive">30</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li>22</li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather_main">
+        <!-- tittle, 현재시간 -->
+        <div id="tit_wrap">
+          <h2 id="tittle">Weather</h2>
+          <div id="now">현재시각 <span id="time"></span></div>
+        </div>
+
+        <!-- 입력창 -->
+        <div class="push">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="도시명을 입력해주세요"
+          />
+          <button type="button" class="btn btn-light">입력</button>
+        </div>
+
+        <!-- 국가 -->
+        <div id="country_but">
+          <button type="button" class="btn btn-link" onclick="weather(`Seoul`)">
+            서울
+          </button>
+          <button
+            type="button"
+            class="btn btn-link"
+            onclick="weather(`Hongkong`)"
+          >
+            홍콩
+          </button>
+          <button type="button" class="btn btn-link" onclick="weather(`Paris`)">
+            파리
+          </button>
+          <button type="button" class="btn btn-link" onclick="weather(`Tokyo`)">
+            도쿄
+          </button>
+        </div>
+
+        <!-- detail -->
+        <div id="wrap">
+          <div id="place"></div>
+          <img id="iconImg" src="" alt="weather icon" />
+          <div id="temp"></div>
+          <div id="des"></div>
+          <div>
+            <span>체감온도</span> <span id="feel"></span> <span>습도</span>
+            <span id="humidity"></span>
+          </div>
+          <div><span>풍속</span> <span id="wind"></span></div>
+        </div>
+
+        <!-- time -->
+        <div id="time_wrap">
+          <div>
+            <span id="one_hour"></span>
+            <img id="one_icon" src="" alt="weather icon" />
+            <span id="one_temp"></span>
+          </div>
+          <div>
+            <span id="three_hour"></span>
+            <img id="three_icon" src="" alt="weather icon" />
+            <span id="three_temp"></span>
+          </div>
+          <div>
+            <span id="five_hour"></span>
+            <img id="five_icon" src="" alt="weather icon" />
+            <span id="five_temp"></span>
+          </div>
+          <div>
+            <span id="seven_hour"></span>
+            <img id="seven_icon" src="" alt="weather icon" />
+            <span id="seven_temp"></span>
+          </div>
+        </div>
+      </div>
+      <div class="weather_image">
+        <ul
+          ontouchstart="startDrag(event)"
+          ontouchmove="drag(event)"
+          ontouchend="endDrag(event)"
+        >
+          <li>
+            <img src="source/weather_source/pic1.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic2.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic3.jpg" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic5.jpg" />
+          </li>
+          <li><img src="source/weather_source/pic4.jpg" /></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/weathercustom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>numbergame</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/numbergamestyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <a href="index.html"><i class="fa-solid fa-angles-left"></i>뒤로가기</a>
+    </div>
+    <div id="form">
+      <h3>Guess the numbers!</h3>
+      <img id="hintImg" src="source/game_source/ready.png" />
+      <span id="answer"></span>
+      <div class="screen">
+        <div class="hint">
+          <span>Hint : </span>
+          <span id="result">Up / Down / Bingo</span>
+        </div>
+        <div class="cou">
+          <span>Count : </span>
+          <span id="count">5</span>
+        </div>
+      </div>
+      <div class="num">
+        <input
+          id="user"
+          type="text"
+          class="form-control"
+          placeholder="숫자를 입력해주세요.(1~100)"
+        />
+        <button id="play" type="button" class="btn btn-warning">Click</button>
+        <button id="restart" type="button" class="btn btn-danger">
+          Restart
+        </button>
+      </div>
+
+      <div class="inputScr">
+        입력된 값
+        <ul id="inputNum">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/numbergamecustom.js"></script>
+  </body>
+</html>
