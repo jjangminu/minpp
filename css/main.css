@@ -1375,18 +1375,28 @@ section {
 /* design */
 .design {
   color: #6499e9;
-  padding: 2rem;
   box-sizing: border-box;
 }
 .design .title {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 3vw;
+  line-height: 0.6;
+  padding-top: 2rem;
+}
+.design .title span {
+  font-size: 2vw;
+  border: 1px dashed #1eae98;
+  box-sizing: border-box;
+  padding: 0.2rem;
 }
 .design .title .photo {
   color: #ff008e;
 }
 .design .title .illu {
   color: #faef5d;
+}
+.design .title .more {
+  color: #f9f9f9;
 }
 
 /* contact */
