@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;"
+    />
+    <link rel="shortcut icon" href="source/spc/tab_icon.png" />
+    <title>SPC</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/spc.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/spc.js"></script>
+  </head>
+  <body>
+    <!-- header bg -->
+    <div class="header_bg"></div>
+    <!-- header -->
+    <header>
+      <!-- logo -->
+      <h1>
+        <a href="index.html"><img src="source/spc/index/logo.svg" /></a>
+      </h1>
+
+      <!-- bar -->
+      <div class="mobile_menu">
+        <div class="bar"><i class="fa-solid fa-bars"></i></div>
+      </div>
+
+      <!-- menu -->
+      <div class="navi">
+        <nav>
+          <ul class="big_menu">
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="about.html">ABOUT SPC</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li><a href="way.html">SPC WAY</a></li>
+                <li><a href="rd.html">R&D</a></li>
+                <li><a href="relative.html">관계사</a></li>
+                <li><a href="global.html">글로벌</a></li>
+                <li><a href="cl.html">CL소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="history.html">HISTORY</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li>
+                  <a href="heritage.html">헤리티지</a>
+                </li>
+                <li><a href="way.html">연혁</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="brand.html">BRAND</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li><a href="bakery.html">베이커리</a></li>
+                <li><a href="dessert.html">디저트</a></li>
+                <li><a href="dining.html">외식/다이닝</a></li>
+                <li><a href="drink.html">커피/음료</a></li>
+                <li><a href="service.html">유통/서비스</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="now.html">SPC NOW</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li><a href="news.html">뉴스</a></li>
+                <li><a href="magazine.html">매거진</a></li>
+                <li><a href="sns.html">SNS</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="esg.html">ESG</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li><a href="esgm.html">ESG경영</a></li>
+                <li><a href="properm.html">정도경영</a></li>
+                <li><a href="safetym.html">안전경영</a></li>
+                <li><a href="happy.html">행복한 재단</a></li>
+                <li><a href="social.html">사회공원</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit_wrap">
+                <a class="tit" href="support.html">SUPPORT</a
+                ><i class="fa-solid fa-angle-down down_but"></i>
+                <i class="fa-solid fa-angle-up up_but"></i>
+              </div>
+              <ul class="sub_nav">
+                <li><a href="franchise.html">가맹문의</a></li>
+                <li><a href="location.html">위치 안내</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- right -->
+      <nav>
+        <div class="header_right">
+          <div class="career">
+            <a href="carrers.html">CAREERS</a
+            ><i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="language">
+            <i class="fa-solid fa-earth-americas earth"></i>
+            <ul class="lan_menu">
+              <li><a href="index_kr.html">KO</a></li>
+              <li><a href="index_en.html">EN</a></li>
+              <li><a href="index_cn.html">CN</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- null값 -->
+    <div class="null"></div>
+
+    <div id="visual">
+      <div class="txt">
+        <h3>일상을 맛있게 행복하게</h3>
+        <h2>Happiness in every bite</h2>
+      </div>
+      <div class="image">
+        <ul class="wrap">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="but_wrap">
+        <div class="button">
+          <i class="fa-solid fa-angle-left left"></i>
+          <i class="fa-solid fa-angle-right right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+      <!-- container_01 -->
+      <div class="con01">
+        <ul>
+          <li>
+            <a href="heritage.html">
+              <div><img src="source/spc/index/con01_1.jpg" alt="" /></div>
+              <h3>헤리티지</h3>
+            </a>
+          </li>
+          <li>
+            <a href="way.html">
+              <div><img src="source/spc/index/con01_2.jpg" alt="" /></div>
+              <h3>SPC WAY</h3>
+            </a>
+          </li>
+          <li>
+            <a href="esg.html">
+              <div><img src="source/spc/index/con01_3.jpg" alt="" /></div>
+              <h3>ESG</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- container_02 -->
+      <div class="con02">
+        <div class="left">
+          <div class="image">
+            <img class="eat" src="source/spc/index/con02_1l.jpg" alt="" />
+            <img class="drink" src="source/spc/index/con02_2l.jpg" alt="" />
+            <img class="enjoy" src="source/spc/index/con02_3l.jpg" alt="" />
+          </div>
+          <div class="txt">
+            <h2 class="eat">먹고</h2>
+            <h2 class="drink">마시고</h2>
+            <h2 class="enjoy">즐기자</h2>
+          </div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <div class="wrap">
+                <h4>BRAND</h4>
+                <p>SPC그룹의 다양한 브랜드를 만나보세요.</p>
+                <div class="button">
+                  <i class="fa-solid fa-angle-left left_but"></i>
+                  <p>0<span>1</span>/06</p>
+                  <i class="fa-solid fa-angle-right right_but"></i>
+                </div>
+              </div>
+            </li>
+            <li>
+              <ul class="img_wrap01 img_wrap">
+                <li>
+                  <a href="samlip.html">
+                    <div>
+                      <img src="source/spc/index/con02_1r.png" alt="호빵" />
+                    </div>
+                    <h3>삼립</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="dunkin.html">
+                    <div>
+                      <img src="source/spc/index/con02_4r.png" alt="던킨" />
+                    </div>
+                    <h3>던킨</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="fashion.html">
+                    <div>
+                      <img src="source/spc/index/con02_7r.jpg" alt="패션5" />
+                    </div>
+                    <h3>패션5</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="rinas.html">
+                    <div>
+                      <img src="source/spc/index/con02_10r.webp" alt="리나스" />
+                    </div>
+                    <h3>리나스</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="streat.html">
+                    <div>
+                      <img src="source/spc/index/con02_13r.webp" alt="스트릿" />
+                    </div>
+                    <h3>스트릿</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="ddli.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_16r.webp"
+                        alt="라뜰리에"
+                      />
+                    </div>
+                    <h3>라뜰리에</h3>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="img_wrap02 img_wrap">
+                <li>
+                  <a href="paris.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_2r.jpg"
+                        alt="파리바게트"
+                      />
+                    </div>
+                    <h3>파리바게트</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="shake.html">
+                    <div>
+                      <img src="source/spc/index/con02_5r.png" alt="쉐이크쉑" />
+                    </div>
+                    <h3>쉐이크쉑</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="raflia.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_8r.webp"
+                        alt="라글리아"
+                      />
+                    </div>
+                    <h3>라글리아</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="riceca.html">
+                    <div>
+                      <img src="source/spc/index/con02_11r.jpg" alt="빚은" />
+                    </div>
+                    <h3>빚은</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="park.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_14r.webp"
+                        alt="퀸즈파크"
+                      />
+                    </div>
+                    <h3>퀸즈파크</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="bera.html">
+                    <div>
+                      <img src="source/spc/index/con02_17r.webp" alt="베라" />
+                    </div>
+                    <h3>베라</h3>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="img_wrap03 img_wrap">
+                <li>
+                  <a href="br.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_3r.jpg"
+                        alt="배스킨라빈스"
+                      />
+                    </div>
+                    <h3>배스킨라빈스</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="cro.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_6r.jpg"
+                        alt="파리크라상"
+                      />
+                    </div>
+                    <h3>파리크라상</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="garden.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_9r.jpg"
+                        alt="피그인더가든"
+                      />
+                    </div>
+                    <h3>피그인더가든</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="sha.html">
+                    <div>
+                      <img src="source/spc/index/con02_12r.png" alt="샤니" />
+                    </div>
+                    <h3>샤니</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="gric.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_15r.webp"
+                        alt="그릭슈바인"
+                      />
+                    </div>
+                    <h3>그릭슈바인</h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="deli.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con02_18r.webp"
+                        alt="시티델리"
+                      />
+                    </div>
+                    <h3>시티델리</h3>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- container 03-->
+      <div class="con03">
+        <div class="left">
+          <ul>
+            <li>
+              <ul class="img_wrap img_wrap01">
+                <li>
+                  <a href="tortia.html">
+                    <div>
+                      <img src="source/spc/index/con03_1l.jpg" alt="또띠아" />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="socer.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con03_4l.jpg"
+                        alt="축구장관객"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="bom.html">
+                    <div>
+                      <img src="source/spc/index/con03_7l.jpg" alt="슈가밤" />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="wrap">
+                <h4>SPC NOW</h4>
+                <p>SPC그룹의 다양한 소식을 만나보세요.</p>
+                <div class="button">
+                  <i class="fa-solid fa-angle-left left_but"></i>
+                  <p>0<span>1</span>/03</p>
+                  <i class="fa-solid fa-angle-right right_but"></i>
+                </div>
+              </div>
+            </li>
+            <li>
+              <ul class="img_wrap img_wrap02">
+                <li>
+                  <a href="twosome.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con03_2l.jpg"
+                        alt="투썸플레이스"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="bom.html">
+                    <div>
+                      <img src="source/spc/index/con03_5l.jpg" alt="슈가밤" />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="bom.html">
+                    <div>
+                      <img src="source/spc/index/con03_8l.jpg" alt="슈가밤" />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="img_wrap img_wrap02">
+                <li>
+                  <a href="country.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con03_3l.jpg"
+                        alt="외국바이어"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="burger.html">
+                    <div>
+                      <img
+                        src="source/spc/index/con03_6l.jpg"
+                        alt="쌀치킨버거"
+                      />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="bom.html">
+                    <div>
+                      <img src="source/spc/index/con03_9l.jpg" alt="슈가밤" />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="txt">
+            <h2 class="news">NEWS</h2>
+            <h2 class="mega">MAGAZINE</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- container_04 -->
+      <div class="con04">
+        <ul>
+          <li>
+            <a href="carrers.html">
+              <div><img src="source/spc/index/con04_1.jpg" alt="의자들" /></div>
+              <h3>CAREERS</h3></a
+            >
+          </li>
+          <li>
+            <a href="support.html">
+              <div>
+                <img src="source/spc/index/con04_2.jpg" alt="빨간 사다리" />
+              </div>
+              <h3>SUPPORT</h3></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <div class="left">
+          <h1>
+            <a href="index.html"
+              ><img src="source/spc/index/logo.svg" alt="logo"
+            /></a>
+          </h1>
+          <div>
+            서울시 서초구 양재동 남부순환로 2620 (양재동 11-149)<br />
+            <a href="person.html">개인정보처리방침</a> |
+            <a href="email.html">이메일수집 거부</a> |
+            <a href="gewn.html">거래희망사전등록</a> | <br />
+            <a href="video.html">고정형영상정보처리기기 운영관리 방침</a>
+          </div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <h4>ABOUT SPC</h4>
+              <ul>
+                <li><a href="way.html">SPC WAY</a></li>
+                <li><a href="rd.html">R&D</a></li>
+                <li><a href="relativ.html">관계사</a></li>
+                <li><a class="global.html">글로벌Y</a></li>
+                <li><a class="ci.html">CI소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>HISTORY</h4>
+              <ul>
+                <li><a href="hari.html">헤리티지</a></li>
+                <li><a href="rd.html">연혁</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>BRAND</h4>
+              <ul>
+                <li><a href="way.html">베이커리</a></li>
+                <li><a href="rd.html">디저트</a></li>
+                <li><a href="relativ.html">외식/다이닝</a></li>
+                <li><a class="global.html">커피/음료</a></li>
+                <li><a class="ci.html">유통/서비스</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>SPC NOW</h4>
+              <ul>
+                <li><a href="way.html">뉴스</a></li>
+                <li><a href="rd.html">매거진</a></li>
+                <li><a href="relativ.html">SNS</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>ESG</h4>
+              <ul>
+                <li><a href="way.html">ESG경영</a></li>
+                <li><a href="rd.html">정도경영</a></li>
+                <li><a href="relativ.html">안전경영</a></li>
+                <li><a class="global.html">행복한 재단</a></li>
+                <li><a class="ci.html">사회공헌</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>SUPPORT</h4>
+              <ul>
+                <li><a href="way.html">가맹문의</a></li>
+                <li><a href="rd.html">위치 안내</a></li>
+                <li><a href="relativ.html">문의하기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bt_l">
+          <div>
+            <h3>FAMILY SITE</h3>
+            <ul class="fam_scroll">
+              <li><a href="">파리바게트</a></li>
+              <li><a href="">배스킨라빈스</a></li>
+              <li><a href="">던킨</a></li>
+              <li><a href="">SPC삼립</a></li>
+              <li><a href="">파리크라상</a></li>
+              <li><a href="">패션5</a></li>
+              <li><a href="">쉐이크쉑</a></li>
+              <li><a href="">파스쿠찌</a></li>
+              <li><a href="">커피앳웍스</a></li>
+              <li><a href="">리나스</a></li>
+              <li><a href="">잠바주스</a></li>
+              <li><a href="">빚은</a></li>
+              <li><a href="">SPC외식브랜드</a></li>
+              <li><a href="">해피포인트</a></li>
+              <li><a href="">해피콘</a></li>
+              <li><a href="">SPC컬러너리아카데미</a></li>
+              <li><a href="">디퀸즈</a></li>
+              <li><a href="">섹타나인</a></li>
+              <li><a href="">SPC GFS</a></li>
+              <li><a href="">SPC PACK</a></li>
+              <li><a href="">타이거인터내셔널</a></li>
+              <li><a href="">온일장</a></li>
+              <li><a href="">KRUMB</a></li>
+            </ul>
+            <div class="plus">
+              <i class="fa-solid fa-plus plus_but"></i
+              ><i class="fa-solid fa-minus minus_but"></i>
+            </div>
+          </div>
+          <p>Copyright SPC All rights reserverd.</p>
+        </div>
+        <div class="bt_r">
+          <div>
+            <a href="facebook.html"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div>
+            <a href="insta.html"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div>
+            <a href="youtu.html"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- fixed -->
+    <div id="fixed">
+      <div class="top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
