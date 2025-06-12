@@ -990,6 +990,10 @@ section {
   }
 }
 
+/* codingHard */
+
+/* codingClone */
+
 /* project */
 .project .wrap {
   width: 300%;
@@ -1038,8 +1042,6 @@ section {
   line-height: 2;
 }
 .project .wrap .detail .visit {
-  bottom: 1rem;
-  right: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -1113,7 +1115,7 @@ section {
 }
 .design .title {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 0.7;
 }
 .design .title span {
@@ -1135,14 +1137,14 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  width: 400%;
+  width: 450%;
   margin-left: 10rem;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 .design .list li {
   width: calc(100% / 17 - 1rem);
   border: 1px solid #ff008e;
-  height: 65vh;
+  height: 60vh;
   cursor: pointer;
   color: #ff008e;
   overflow: hidden;

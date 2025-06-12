@@ -135,10 +135,9 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".vision",
-      start: "top top",
-      end: "bottom 20%",
+      start: "top 70%",
+      end: "top top",
       scrub: 2,
-      pin: true,
     },
   })
   .fromTo(
@@ -203,16 +202,24 @@ gsap
     { width: "100%", duration: 25 },
     0
   );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".vision",
+    start: "top top",
+    end: "30% top",
+    scrub: 2,
+    pin: true,
+  },
+});
 
 //aboutMe
 gsap
   .timeline({
     scrollTrigger: {
       trigger: ".aboutMe",
-      start: "top top",
-      end: "bottom 20%",
+      start: "top 40%",
+      end: "50% top",
       scrub: 2,
-      pin: true,
     },
   })
   .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 2 })
@@ -293,6 +300,15 @@ gsap
     { opacity: 1, width: "100%", duration: 25 },
     10
   );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".aboutMe",
+    start: "top top",
+    end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
 
 //project
 gsap
@@ -367,6 +383,21 @@ let list = gsap.utils.toArray(".design .list li");
 let listA = gsap.utils.toArray(".design .list li.a");
 let listB = gsap.utils.toArray(".design .list li.b");
 let listC = gsap.utils.toArray(".design .list li.c");
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".design",
+      start: "top 80%",
+      end: "top top",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".design .title h2",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 2 }
+  )
+  .fromTo(".design .list", { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
 gsap.to(list, {
   xPercent: -1650,
   ease: "none",
