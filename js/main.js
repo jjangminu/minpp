@@ -18,7 +18,7 @@ let windowY = window.innerHeight;
 //page top 값
 let visual = $("#visual").offset().top;
 let vision = $("#vision").offset().top;
-let codingHard = $("#codingHard").offset().top;
+let codingHard = $("#codingHardF").offset().top;
 let project = $("#project").offset().top;
 let design = $("#design").offset().top;
 let contact = $("#contact").offset().top;
@@ -55,22 +55,22 @@ $(window).on("scroll", function () {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(1).addClass("on");
     $("header .menu li").eq(1).addClass("on");
-  } else if (scr >= codingHard && scr < project) {
+  } else if (scr >= codingHard + 500 && scr < project) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(2).addClass("on");
     $("header .menu li").eq(2).addClass("on");
-  } else if (scr >= project && scr < design) {
+  } else if (scr >= project + 500 && scr < design) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(3).addClass("on");
     $("header .menu li").eq(3).addClass("on");
-  } else if (scr >= design && scr < contact) {
+  } else if (scr >= design + 700 && scr < contact) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .menu li").eq(4).addClass("on");
-  } else if (scr >= contact) {
+  } else if (scr >= contact + 1500) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(5).addClass("on");
@@ -222,77 +222,76 @@ gsap
       scrub: 2,
     },
   })
-  .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 2 })
+  .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 3 })
   .fromTo(
     ".aboutMe .top li:first-child",
     { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 2 }
+    { opacity: 1, y: 0, duration: 3 }
   )
   .fromTo(
     ".aboutMe .top li:nth-child(2)",
     { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 2 }
+    { opacity: 1, y: 0, duration: 3 }
   )
   .fromTo(
     ".aboutMe .top li:last-child",
     { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 2 }
+    { opacity: 1, y: 0, duration: 3 }
   )
   .fromTo(
     ".aboutMe .middle li:first-child",
     { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 2 }
+    { opacity: 1, x: 0, duration: 3 }
   )
   .fromTo(
     ".aboutMe .middle li:last-child",
     { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 2 }
+    { opacity: 1, x: 0, duration: 3 }
   )
-
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(1)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(2)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(3)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(4)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(5)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(6)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(7)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(8)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom ul li:nth-child(9)",
     { opacity: 0 },
-    { opacity: 1, duration: 2 }
+    { opacity: 1, duration: 3 }
   )
   .fromTo(
     ".aboutMe .bottom .line",
@@ -399,7 +398,7 @@ gsap
   )
   .fromTo(".design .list", { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
 gsap.to(list, {
-  xPercent: -1650,
+  xPercent: -1550,
   ease: "none",
   scrollTrigger: {
     trigger: ".design",
@@ -410,7 +409,7 @@ gsap.to(list, {
   },
 });
 gsap.to(listA, {
-  rotation: 20,
+  rotation: 5,
   scrollTrigger: {
     trigger: ".design",
     start: "center center",
@@ -428,7 +427,7 @@ gsap.to(listB, {
   },
 });
 gsap.to(listC, {
-  rotation: -30,
+  rotation: -10,
   scrollTrigger: {
     trigger: ".design",
     start: "center center",
