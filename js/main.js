@@ -205,16 +205,15 @@ gsap
   );
 
 //aboutMe
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".aboutMe",
-      start: "top top",
-      end: "bottom 20%",
-      scrub: 2,
-      pin: true,
-    },
-  })
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".aboutMe",
+    start: "top top",
+    end: "bottom 20%",
+    scrub: 2,
+    pin: true,
+  },
+}); /*
   .fromTo(
     ".aboutMe .cross.one ",
     {
@@ -267,7 +266,7 @@ gsap
       y: "-450%",
     },
     { opacity: 1, scale: 1, duration: 3 }
-  );
+  ); */
 
 //codingHard
 gsap.timeline({
@@ -580,24 +579,114 @@ $(".codingClone .back").on("click", function () {
 });
 
 //project
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".project",
+      start: "top 80%",
+      end: "20% 60%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".project .wrap > li",
+    { scale: 0, opacity: 0 },
+    { opacity: 1, duration: 3, scale: 1 }
+  );
 gsap.timeline({
   scrollTrigger: {
     trigger: ".project",
     start: "top top",
-    end: "bottom top",
+    end: "50% top",
     scrub: 2,
     pin: true,
   },
 });
 
+projectSwipe();
+function projectSwipe() {
+  roll = setInterval(function () {
+    $(".project .wrap")
+      .stop()
+      .animate({ "margin-left": "-100%" }, function () {
+        $(".project .wrap > li:first-child").appendTo(".project .wrap");
+        $(".project .wrap").css({ "margin-left": "0px" });
+      });
+    $(".project .nav .line").css("width", "0px");
+    $(".project .nav .line").stop().animate({ width: "70%" }, 3000);
+  }, 3000);
+}
+$(".project .nav .play").on("click", function () {
+  projectSwipe();
+  $(".project .nav .line").stop().animate({ width: "70%" }, 3000);
+});
+$(".project .nav .pause").on("click", function () {
+  clearInterval(roll);
+  $(".project .nav .line").stop().css("width", "0px");
+});
+$(".project .right").on("click", function () {
+  clearInterval(roll);
+  $(".project .wrap")
+    .stop()
+    .animate({ "margin-left": "-100%" }, function () {
+      $(".project .wrap > li:first-child").appendTo(".project .wrap");
+      $(".project .wrap").css({ "margin-left": "0px" });
+    });
+  $(".project .nav .line").stop().css("width", "0px");
+  $(".project .nav .line").stop().animate({ width: "70%" }, 3000);
+  projectSwipe();
+});
+$(".project .left").on("click", function () {
+  clearInterval(roll);
+  $(".project .wrap > li:last-child").prependTo(".project .wrap");
+  $(".project .wrap").css({ "margin-left": "-100%" });
+  $(".project .wrap").stop().animate({ "margin-left": "0px" });
+  $(".project .nav .line").stop().css("width", "0px");
+  $(".project .nav .line").stop().animate({ width: "70%" }, 3000);
+  projectSwipe();
+});
+
 //design
-gsap.timeline({
+let list = gsap.utils.toArray(".design .list li");
+let listA = gsap.utils.toArray(".design .list li.a");
+let listB = gsap.utils.toArray(".design .list li.b");
+let listC = gsap.utils.toArray(".design .list li.c");
+gsap.to(list, {
+  xPercent: -1650,
+  ease: "none",
   scrollTrigger: {
     trigger: ".design",
-    start: "top top",
-    end: "bottom top",
-    scrub: 2,
+    start: "center center",
+    end: "100% 0% ",
     pin: true,
+    scrub: 5,
+  },
+});
+gsap.to(listA, {
+  rotation: 20,
+  scrollTrigger: {
+    trigger: ".design",
+    start: "center center",
+    end: "100% 0% ",
+    scrub: 2,
+  },
+});
+gsap.to(listB, {
+  rotation: 10,
+  scrollTrigger: {
+    trigger: ".design",
+    start: "center center",
+    end: "100% 0% ",
+    scrub: 2,
+  },
+});
+gsap.to(listC, {
+  rotation: -30,
+  scrollTrigger: {
+    trigger: ".design",
+    start: "center center",
+    end: "100% 0% ",
+    scrub: 2,
   },
 });
 
@@ -631,3 +720,15 @@ gsap
     { opacity: 0, x: 500 },
     { opacity: 1, x: 0, duration: 5 }
   );
+$(".design .list li").on("click", function () {
+  let i = $(".design .list li").index(this);
+  console.log(i);
+  $(".design .list_s").fadeIn(500);
+  $(".design .close").fadeIn(500);
+  $(".design .list_s li").eq(i).css("opacity", "1");
+});
+$(".design .close").on("click", function () {
+  $(".design .list_s").fadeOut(500);
+  $(".design .close").fadeOut(500);
+  $(".design .list_s li").css("opacity", "0");
+});

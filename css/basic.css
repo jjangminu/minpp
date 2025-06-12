@@ -1,0 +1,58 @@
+/*basic font*/
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* logo font */
+@font-face {
+  font-family: "Hahmlet-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* visual font */
+@font-face {
+  font-family: "twaysky";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LOTTERIADDAG";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 기본설정 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  width: 10px; /* 세로축 스크롤바 폭 너비 */
+  height: 20px; /* 가로축 스크롤바 폭 너비 */
+}
+::-webkit-scrollbar-thumb {
+  background: #1eae98; /* 스크롤바 막대 색상 */
+  border-radius: 5rem;
+  height: 20vh;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <title>지유가오카</title>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font awsome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--tab icon-->
+    <link rel="icon" href="source/jiyugaoka/menu_logo.png" />
+    <!--css-->
+    <link rel="stylesheet" href="css/jiyugaoka.css" />
+    <!--script-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jiyugaoka.js"></script>
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <!--logo-->
+      <h1>
+        <a href="index.html"
+          ><img src="source/jiyugaoka/logo.png" alt="logo"
+        /></a>
+      </h1>
+      <!--nav-->
+      <nav>
+        <ul>
+          <li>
+            <a class="tit" href="brand.html">BRAND</a>
+            <ul class="sub_nav">
+              <li><a href="story.html">브랜드스토리</a></li>
+              <li><a href="competi.html">브랜드경쟁력</a></li>
+              <li><a href="partner.html">협력사</a></li>
+              <li><a href="office.html">본사소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="tit" href="menu.html">MENU</a>
+            <ul class="sub_nav">
+              <li><a href="cake.html">케이크</a></li>
+              <li><a href="drink.html">음료</a></li>
+              <li><a href="dessert.html">디저트</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="tit" href="store.html">STORE</a>
+            <ul class="sub_nav">
+              <li><a href="region.html">지역별매장정보</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="tit" href="news.html">NEWS</a>
+            <ul class="sub_nav">
+              <li><a href="press.html">언론보도</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="tit" href="cf.html">
+              <img src="source/jiyugaoka/menu_video.png" alt="" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--bar-->
+      <div class="bar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="bar_nav mob_nav">
+        <div class="wrap">
+          <div class="sitemap">
+            SITEMAP <i class="fa-solid fa-xmark close"></i>
+          </div>
+          <ul>
+            <li>
+              <h3>
+                BRAND<i class="fa-solid fa-plus plus"></i
+                ><i class="fa-solid fa-minus minus"></i>
+              </h3>
+              <div>
+                <a href="story.html">브랜드스토리</a>
+                <a href="competi.html">브랜드경쟁력</a>
+                <a href="partner.html">협력사</a>
+                <a href="office.html">본사소개</a>
+              </div>
+            </li>
+            <li>
+              <h3>
+                MENU<i class="fa-solid fa-plus plus"></i
+                ><i class="fa-solid fa-minus minus"></i>
+              </h3>
+              <div>
+                <a href="cake.html">케이크</a>
+                <a href="drink.html">음료</a>
+                <a href="dessert.html">디저트</a>
+              </div>
+            </li>
+            <li>
+              <h3>
+                STORE<i class="fa-solid fa-plus plus"></i
+                ><i class="fa-solid fa-minus minus"></i>
+              </h3>
+              <div>
+                <a href="region.html">지역별매장정보</a>
+              </div>
+            </li>
+            <li>
+              <h3>
+                NEWS<i class="fa-solid fa-plus plus"></i
+                ><i class="fa-solid fa-minus minus"></i>
+              </h3>
+              <div>
+                <a href="press.html">언론보도</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="bar_m">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="black_bg"></div>
+    </header>
+
+    <!--visual-->
+    <div id="visual">
+      <img
+        class="mov"
+        src="source/jiyugaoka/visual.jpg"
+        alt="초코케이크 이미지"
+      />
+      <div class="txt_wrap">
+        <h4>PREMIUM CAKE & BREAD</h4>
+        <h2>JIYUGAOKA</h2>
+        <h4 class="bottom">고품격 디저트카페 지유가오카</h4>
+      </div>
+    </div>
+
+    <!--contents-->
+    <section id="contents">
+      <!--con01-->
+      <article class="con01">
+        <div class="wrap">
+          <div class="txt">
+            <h4>지유가오카 소개</h4>
+            <h3>
+              About<br />
+              Jiyugaoka
+            </h3>
+            <div class="line"></div>
+            <p>
+              지유가오카는 숙련된 파티쉐들이<br />
+              모든 케이크와 디저트를 <br />정성껏 구워냅니다
+            </p>
+          </div>
+          <div class="img_wrap">
+            <div class="mo_but">
+              <i class="fa-solid fa-arrow-left left"></i>
+              <i class="fa-solid fa-arrow-right right"></i>
+            </div>
+            <ul class="image">
+              <li>
+                <a href="story.html">
+                  <div>
+                    <img
+                      src="source/jiyugaoka/about_img_1_pc.jpg"
+                      alt="파티쉬에사진"
+                    />
+                  </div>
+                  <h4>브랜드스토리</h4>
+                  <p>고품격 디저트카페 지유가오카를 소개합니다.</p></a
+                >
+              </li>
+              <li>
+                <a href="rehion.html">
+                  <div>
+                    <img
+                      src="source/jiyugaoka/about_img_2_pc.jpg"
+                      alt="매장사진"
+                    />
+                  </div>
+                  <h4>지역별 매장정보</h4>
+                  <p>지역별 매장 정보를 확인하실 수 있습니다.</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!--con02-->
+      <article class="con02">
+        <div class="wrap">
+          <ul class="detail">
+            <li>
+              <div class="img_wrap">
+                <img
+                  src="source/jiyugaoka/main_fermentation_bg_pc.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="txt_wrap">
+                <h5>Fermentation</h5>
+                <p>업계최초 <span>유산균 발효 공법</span></p>
+                <div class="but">
+                  <a href="fermentation.html"
+                    >보러가기 <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="img_wrap">
+                <img src="source/jiyugaoka/main_dessert_bg_pc.jpg" alt="" />
+              </div>
+              <div class="txt_wrap">
+                <h5>Dessert</h5>
+                <p>죽기전에 먹어봐야 할 <span>디저트</span></p>
+                <div class="but">
+                  <a href="fermentation.html"
+                    >보러가기 <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="cir_but">
+            <li class="on"></li>
+            <li></li>
+          </ul>
+        </div>
+      </article>
+
+      <!--con03-->
+      <article class="con03">
+        <div class="wrap">
+          <ul class="imgwrap01 image">
+            <li class="on">
+              <img src="source/jiyugaoka/main_story_img1.png" alt="" />
+            </li>
+            <li>
+              <img src="source/jiyugaoka/main_story_img3.png" alt="" />
+            </li>
+          </ul>
+          <ul class="imgwrap02 image">
+            <li class="on">
+              <img src="source/jiyugaoka/main_story_img2.png" alt="" />
+            </li>
+            <li>
+              <img src="source/jiyugaoka/main_story_img4.png" alt="" />
+            </li>
+          </ul>
+          <ul class="tit">
+            <li class="on">
+              <h3>Simple, Refined, Jiyugaoka</h3>
+            </li>
+            <li>
+              <h3>Premium Cake Story</h3>
+            </li>
+          </ul>
+          <div class="top_but">
+            <i class="fa-solid fa-angle-left left"></i>
+            <p>|</p>
+            <i class="fa-solid fa-angle-right right"></i>
+          </div>
+          <ul class="mo_imgwrap">
+            <li class="on">
+              <img src="source/jiyugaoka/main_brand_img1_m.png" alt="" />
+            </li>
+            <li><img src="source/jiyugaoka/main_brand_img2_m.png" alt="" /></li>
+          </ul>
+          <ul class="txt">
+            <li class="on">
+              <h4>숙련된 파티쉐들이 정성껏 구워낸 수제케이크와 디저트</h4>
+            </li>
+            <li>
+              <h4>
+                디저트의 본 고장에서 전수받은 기술력과<br />
+                일류호텔 출신 셰프들의 오랜 연구와 노하우로 만드는 수제 케이크
+              </h4>
+            </li>
+          </ul>
+          <ul class="detail">
+            <li class="on">
+              지유가오카는 일본 도쿄의 디저트카페로 유명한 지유가오카거리에서
+              영감을 받아 탄생하였습니다. <br />
+              고급 주택가와 상점들이 골목골목 어우러진 지유가오카 거리의
+              고즈넉한 분위기를 추구하며,<br />
+              남녀노소 누구나 편하게 방문하여 정성껏 구워낸 수제케이크와
+              디저트를 접할 수 있는<br />
+              순수 대한민국의 토종 기업입니다. 지유가오카를 찾는 고객분들께<br />
+              화학첨가물을 사용하지 않고100% 수제 디저트로 고객들의 입맛을
+              사로잡기 위해<br />
+              매장에서 매일 구워내던 1호점의 방식 그대로 오늘도 숙련된
+              파티시에들이 정성껏 구워내고 있습니다.
+            </li>
+            <li>
+              디저트의 본 고장에서 전수받은 기술력과,<br />
+              일류호텔 출신 셰프들의 오랜 연구와 노하우로 만드는 수제
+              케이크입니다.<br />
+              화학첨가물 없이 최고의 재료로 만들어<br />
+              부드러움과 적당하게 기분 좋은 달콤함을 느낄 수 있는 고품격
+              케이크입니다.
+            </li>
+          </ul>
+          <ul class="cir_but">
+            <li class="but1 on"></li>
+            <li class="but2"></li>
+          </ul>
+          <div class="navy_but">
+            <div class="bg"></div>
+            <a href="story.html">브랜드스토리 보러가기</a>
+          </div>
+        </div>
+      </article>
+
+      <!--con04-->
+      <article class="con04">
+        <img
+          src="source/jiyugaoka/main_interior_bg.jpg"
+          alt="지유가오카 로고이미지"
+        />
+        <div class="wrap">
+          <div class="detail">
+            <h3>
+              Jiyugaoka<br />
+              Interior
+            </h3>
+            <div class="image">
+              <img src="source/jiyugaoka/main_interior_img3.jpg" alt="" />
+              <img src="source/jiyugaoka/main_interior_img4.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <h4>독특하고 유니크한 컨셉의 인테리어</h4>
+              <p>
+                수많은 카페 중에서 이용자의 발길이 끊기지 않는 공간으로 만들기
+                위해 지유가오카만의 독특하고 유니크한 컨셉으로 소품 하나까지
+                고객분들의 마음을 사로잡는 카페 인테리어와 효율적인 공간을
+                연출합니다.
+              </p>
+            </div>
+            <div class="navy_but">
+              <div class="bg"></div>
+              <a href="interior.html">인테리어 보러가기</a>
+            </div>
+          </div>
+          <img
+            class="cooker"
+            src="source/jiyugaoka/main_interior_img3.png"
+            alt=""
+          />
+        </div>
+      </article>
+
+      <!--con05-->
+      <article class="con05">
+        <div class="con5_wrap">
+          <div class="txt">
+            <h4>메뉴 소개</h4>
+            <h3>Jiyugaoka <br />Menu</h3>
+            <div class="line"></div>
+            <p>지유가오카의 메뉴를 <br />소개합니다</p>
+          </div>
+          <ul class="image">
+            <li>
+              <a href="cake.html">
+                <div class="img_wrap">
+                  <img
+                    class="back mov2"
+                    src="source/jiyugaoka/main_menu_img1.png"
+                    alt=""
+                  />
+                  <img
+                    class="front"
+                    src="source/jiyugaoka/main_menu_img1.png"
+                    alt=""
+                  />
+                </div>
+                <h4>케이크</h4>
+                <p>Cake</p>
+              </a>
+            </li>
+            <li>
+              <a href="desert.html">
+                <div class="img_wrap">
+                  <img
+                    class="back mov2"
+                    src="source/jiyugaoka/main_menu_img3.png"
+                    alt=""
+                  />
+                  <img
+                    class="front"
+                    src="source/jiyugaoka/main_menu_img3.png"
+                    alt=""
+                  />
+                </div>
+                <h4>디저트</h4>
+                <p>Desert</p>
+              </a>
+            </li>
+            <li>
+              <a href="drink.html">
+                <div class="img_wrap">
+                  <img
+                    class="back mov2"
+                    src="source/jiyugaoka/main_menu_img4.png"
+                    alt=""
+                  />
+                  <img
+                    class="front"
+                    src="source/jiyugaoka/main_menu_img4.png"
+                    alt=""
+                  />
+                </div>
+                <h4>음료</h4>
+                <p>Drinks</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="con06">
+        <div class="wrap">
+          <div class="txt">
+            <h4>Instagram</h4>
+            <div class="line"></div>
+            <p>
+              지유가오카 인스타그램에서<br />
+              많은 사진들을 확인해보세요
+            </p>
+            <div class="but">
+              <div class="bg"></div>
+              <a href="jiyugaoka.instagram.com"> 인스타그램가기</a>
+            </div>
+          </div>
+          <div class="img_wrap">
+            <div class="arrow_but">
+              <i class="fa-solid fa-arrow-left left"></i>
+              <i class="fa-solid fa-arrow-right right"></i>
+            </div>
+            <ul class="banners">
+              <li>
+                <img src="source/jiyugaoka/main_banner_1_pc.jpg" alt="" />
+                <img src="" alt="" />
+              </li>
+              <li>
+                <img src="source/jiyugaoka/main_banner_2_pc.jpg" alt="" />
+              </li>
+              <li>
+                <img src="source/jiyugaoka/main_banner_3_pc.jpg" alt="" />
+              </li>
+            </ul>
+            <ul class="cir_but">
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="left">
+        지유가오카 | 대표자 : 조종철 | 본사 : 성남시 중원구 갈마치로302호
+        우림라이온스벨리5차 | 대표전화 : 02 - 540 - 2204 | 팩스 : 02 - 540 -
+        2237<br />
+        지유가오카 핫초메 사업자번호 : 261 - 81 - 15766 | 지유가오카 브레드
+        사업자번호 : 680 - 87 - 00452<br />
+        Copyright © 지유가오카 All rights reserved.
+      </div>
+      <h1 class="right">
+        <a href="index.html"
+          ><img src="source/jiyugaoka/menu_logo.png" alt=""
+        /></a>
+      </h1>
+    </footer>
+
+    <div class="fix_but">
+      <a href="index.html">
+        <i class="fa-solid fa-arrow-up"></i>
+        <p>TOP</p>
+      </a>
+    </div>
+  </body>
+</html>
