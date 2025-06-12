@@ -135,10 +135,9 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".vision",
-      start: "top top",
-      end: "bottom 20%",
+      start: "top 70%",
+      end: "top top",
       scrub: 2,
-      pin: true,
     },
   })
   .fromTo(
@@ -203,379 +202,112 @@ gsap
     { width: "100%", duration: 25 },
     0
   );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".vision",
+    start: "top top",
+    end: "30% top",
+    scrub: 2,
+    pin: true,
+  },
+});
 
 //aboutMe
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".aboutMe",
+      start: "top 40%",
+      end: "50% top",
+      scrub: 2,
+    },
+  })
+  .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 2 })
+  .fromTo(
+    ".aboutMe .top li:first-child",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .top li:nth-child(2)",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .top li:last-child",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .middle li:first-child",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .middle li:last-child",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 2 }
+  )
+
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(1)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(2)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(3)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(4)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(5)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(6)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(7)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(8)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom ul li:nth-child(9)",
+    { opacity: 0 },
+    { opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".aboutMe .bottom .line",
+    { opacity: 0, width: "0px" },
+    { opacity: 1, width: "100%", duration: 25 },
+    10
+  );
 gsap.timeline({
   scrollTrigger: {
     trigger: ".aboutMe",
     start: "top top",
-    end: "bottom 20%",
+    end: "60% top",
     scrub: 2,
     pin: true,
   },
-}); /*
-  .fromTo(
-    ".aboutMe .cross.one ",
-    {
-      opacity: 0,
-      scale: 0,
-      x: -500,
-    },
-    { opacity: 1, scale: 1, rotation: 360, duration: 3, x: 0 }
-  )
-  .fromTo(
-    ".aboutMe .cross.two ",
-    {
-      opacity: 0,
-      scale: 0,
-      rotation: 360,
-      x: 500,
-    },
-    { opacity: 1, scale: 1, duration: 3, x: 0, rotation: 45 }
-  )
-  .fromTo(
-    ".aboutMe .cross.three ",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe h2 ",
-    {
-      opacity: 0,
-      y: -500,
-    },
-    { opacity: 1, duration: 5, y: 0 }
-  )
-  .fromTo(
-    ".aboutMe .card ",
-    {
-      opacity: 0,
-      scale: 0,
-      y: 5000,
-    },
-    { opacity: 1, scale: 1, duration: 10, y: 0 }
-  )
-  .fromTo(
-    ".aboutMe .circle2 ",
-    {
-      opacity: 0,
-      scale: 0,
-      y: "-450%",
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  ); */
-
-//codingHard
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingHard",
-    start: "top top",
-    end: "bottom top",
-    scrub: 2,
-    pin: true,
-  },
-});
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingHard",
-      start: "top top",
-      end: "bottom 20%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingHard .txtWrap",
-    {
-      opacity: 0,
-    },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .left li:first-child",
-    {
-      opacity: 0,
-      x: -500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .imgWrap",
-    {
-      opacity: 0,
-      x: 500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .left li:last-child",
-    {
-      opacity: 0,
-      x: -500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .right .detail",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .right .detail .wrap",
-    { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .right .detail ul",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingHard .right .nav",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  );
-
-//codingHard nav
-let h = 0;
-startH();
-function timerH() {
-  $(".codingHard .nav .line")
-    .css({ transition: "none", width: "0%" })
-    .outerWidth();
-  setInterval(() => {
-    $(".codingHard .nav .line").css({
-      transition: "width 5s linear",
-      width: "80%",
-    });
-  }, 10);
-}
-function startH() {
-  stop = setInterval(function () {
-    if (h == 2) {
-      h = 0;
-    } else {
-      h++;
-    }
-    timerH();
-    $(".codingHard .roll li").fadeOut(10);
-    if (h == 0) {
-      $(".codingHard .roll li.one").fadeIn(500);
-    } else if (h == 1) {
-      $(".codingHard .roll li.two").fadeIn(500);
-    } else if (h == 2) {
-      $(".codingHard .roll li.three").fadeIn(500);
-    }
-  }, 5000);
-}
-
-$(".codingHard .nav .play").on("click", function () {
-  startH();
-  timer();
-  $(".codingHard .nav .pause").removeClass("on");
-});
-
-$(".codingHard .nav .pause").on("click", function () {
-  clearInterval(stop);
-  $(this).addClass("on");
-});
-
-$(".codingHard .for").on("click", function () {
-  clearInterval(stop);
-  $(".codingHard .nav .pause").removeClass("on");
-  if (h == 2) {
-    h = 0;
-  } else {
-    h++;
-  }
-  $(".codingHard .roll li").fadeOut(10);
-  if (h == 0) {
-    $(".codingHard .roll li.one").fadeIn(500);
-  } else if (h == 1) {
-    $(".codingHard .roll li.two").fadeIn(500);
-  } else if (h == 2) {
-    $(".codingHard .roll li.three").fadeIn(500);
-  }
-  startH();
-  timerH();
-});
-
-$(".codingHard .back").on("click", function () {
-  clearInterval(stop);
-  $(".codingHard .nav .pause").removeClass("on");
-  if (h == 0) {
-    h = 2;
-  } else {
-    h--;
-  }
-  $(".codingHard .roll li").fadeOut(10);
-  if (h == 0) {
-    $(".codingHard .roll li.one").fadeIn(500);
-  } else if (h == 1) {
-    $(".codingHard .roll li.two").fadeIn(500);
-  } else if (h == 2) {
-    $(".codingHard .roll li.three").fadeIn(500);
-  }
-  startH();
-  timerH();
-});
-
-//codingClone
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingClone",
-    start: "top top",
-    end: "bottom top",
-    scrub: 2,
-    pin: true,
-  },
-});
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingClone",
-      start: "top top",
-      end: "bottom 20%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingClone .txtWrap",
-    {
-      opacity: 0,
-    },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right li:first-child",
-    {
-      opacity: 0,
-      x: 500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .imgWrap",
-    {
-      opacity: 0,
-      x: -500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right li:last-child",
-    {
-      opacity: 0,
-      x: 500,
-    },
-    { opacity: 1, x: 0, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right .detail",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right .detail .wrap",
-    { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right .detail ul",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  )
-  .fromTo(
-    ".codingClone .right .nav",
-    { opacity: 0 },
-    { opacity: 1, duration: 2 }
-  );
-
-//codingClone nav
-let c = 0;
-startC();
-function timerC() {
-  $(".codingClone .nav .line")
-    .css({ transition: "none", width: "0%" })
-    .outerWidth();
-  setInterval(() => {
-    $(".codingClone .nav .line").css({
-      transition: "width 5s linear",
-      width: "80%",
-    });
-  }, 10);
-}
-function startC() {
-  stop = setInterval(function () {
-    if (c == 2) {
-      c = 0;
-    } else {
-      c++;
-    }
-    timerC();
-    $(".codingClone .roll li").fadeOut(10);
-    if (c == 0) {
-      $(".codingClone .roll li.one").fadeIn(500);
-    } else if (c == 1) {
-      $(".codingClone .roll li.two").fadeIn(500);
-    } else if (c == 2) {
-      $(".codingClone .roll li.three").fadeIn(500);
-    }
-  }, 5000);
-}
-
-$(".codingClone .nav .play").on("click", function () {
-  startC();
-  timerC();
-  $(".codingClone .nav .pause").removeClass("on");
-});
-
-$(".codingClone .nav .pause").on("click", function () {
-  clearInterval(stop);
-  $(this).addClass("on");
-});
-
-$(".codingClone .for").on("click", function () {
-  clearInterval(stop);
-  $(".codingClone .nav .pause").removeClass("on");
-  if (c == 2) {
-    c = 0;
-  } else {
-    c++;
-  }
-  $(".codingClone .roll li").fadeOut(10);
-  if (c == 0) {
-    $(".codingClone .roll li.one").fadeIn(500);
-  } else if (c == 1) {
-    $(".codingClone .roll li.two").fadeIn(500);
-  } else if (c == 2) {
-    $(".codingClone .roll li.three").fadeIn(500);
-  }
-  startC();
-  timerC();
-});
-
-$(".codingClone .back").on("click", function () {
-  clearInterval(stop);
-  $(".codingClone .nav .pause").removeClass("on");
-  if (c == 0) {
-    c = 2;
-  } else {
-    c--;
-  }
-  $(".codingClone .roll li").fadeOut(10);
-  if (c == 0) {
-    $(".codingClone .roll li.one").fadeIn(500);
-  } else if (c == 1) {
-    $(".codingClone .roll li.two").fadeIn(500);
-  } else if (c == 2) {
-    $(".codingClone .roll li.three").fadeIn(500);
-  }
-  startC();
-  timerC();
 });
 
 //project
@@ -651,6 +383,21 @@ let list = gsap.utils.toArray(".design .list li");
 let listA = gsap.utils.toArray(".design .list li.a");
 let listB = gsap.utils.toArray(".design .list li.b");
 let listC = gsap.utils.toArray(".design .list li.c");
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".design",
+      start: "top 80%",
+      end: "top top",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".design .title h2",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 2 }
+  )
+  .fromTo(".design .list", { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
 gsap.to(list, {
   xPercent: -1650,
   ease: "none",
