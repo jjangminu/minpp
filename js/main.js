@@ -60,17 +60,17 @@ $(window).on("scroll", function () {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(2).addClass("on");
     $("header .menu li").eq(2).addClass("on");
-  } else if (scr >= project + 500 && scr < design) {
+  } else if (scr >= project + 2000 && scr < design + 2000) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(3).addClass("on");
     $("header .menu li").eq(3).addClass("on");
-  } else if (scr >= design + 700 && scr < contact) {
+  } else if (scr >= design + 2500 && scr < contact + 2500) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .menu li").eq(4).addClass("on");
-  } else if (scr >= contact + 1500) {
+  } else if (scr >= contact + 3500) {
     $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").eq(5).addClass("on");
@@ -309,6 +309,212 @@ gsap.timeline({
   },
 });
 
+//codingHard
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".codingHardF",
+      start: "top 60%",
+      end: "50% 10%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".codingHardF .web",
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardF .title",
+    { opacity: 0, x: 50 },
+    { x: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(".codingHardF .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(
+    ".codingHardF .icon",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardF .button",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardF .image",
+    { opacity: 0, y: 500 },
+    { opacity: 1, y: 0, duration: 3 },
+    5
+  )
+  .fromTo(
+    ".codingHardF .image img",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 3 },
+    10
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingHardF",
+    start: "top top",
+    end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".codingHardS",
+      start: "top 60%",
+      end: "50% 10%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".codingHardS .web",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardS .title",
+    { opacity: 0, x: -50 },
+    { x: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(".codingHardS .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(
+    ".codingHardS .icon",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardS .button",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardS .image",
+    { opacity: 0, y: 500 },
+    { opacity: 1, y: 0, duration: 3 },
+    5
+  )
+  .fromTo(
+    ".codingHardS .image img",
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 3 },
+    10
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingHardS",
+    start: "top top",
+    end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".codingHardT",
+      start: "top 60%",
+      end: "50% 10%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".codingHardT .web",
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardT .title",
+    { opacity: 0, x: 50 },
+    { x: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(".codingHardT .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(
+    ".codingHardT .icon",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardT .button",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardT .image",
+    { opacity: 0, y: 500 },
+    { opacity: 1, y: 0, duration: 3 },
+    5
+  )
+  .fromTo(
+    ".codingHardT .image img",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 3 },
+    10
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingHardT",
+    start: "top top",
+    end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".codingHardR",
+      start: "top 60%",
+      end: "50% 10%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".codingHardR .web",
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardR .title",
+    { opacity: 0, x: -50 },
+    { x: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(".codingHardR .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(
+    ".codingHardR .icon",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardR .button",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingHardR .image",
+    { opacity: 0, y: 500 },
+    { opacity: 1, y: 0, duration: 3 },
+    5
+  )
+  .fromTo(
+    ".codingHardR .image img",
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 3 },
+    10
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingHardR",
+    start: "top top",
+    end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
+
 //project
 gsap
   .timeline({
@@ -433,6 +639,17 @@ gsap.to(listC, {
     start: "center center",
     end: "100% 0% ",
     scrub: 2,
+  },
+});
+
+//video
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".video",
+    start: "top top",
+    end: "50% top",
+    scrub: 2,
+    pin: true,
   },
 });
 
