@@ -1,47 +1,4 @@
-/*basic font*/
-@font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-/* logo font */
-@font-face {
-  font-family: "Hahmlet-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-/* visual font */
-@font-face {
-  font-family: "twaysky";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "LOTTERIADDAG";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 기본설정 */
-* {
-  margin: 0px;
-  padding: 0px;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: unset;
-}
+/* body */
 html,
 body {
   background-color: #1a1a1a;
@@ -802,74 +759,136 @@ section {
 .aboutMe {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.aboutMe h2 {
-  font-size: 6vw;
-  padding: 5rem 0 0 5rem;
-}
-/* aboutMe card */
-.aboutMe .cardWrap {
-  width: 93%;
-  margin: 0px auto;
-  display: flex;
-  justify-content: end;
-  position: relative;
-}
-.aboutMe .card {
-  background-color: #faef5d;
-  color: #1a1a1a;
-  width: 60vw;
-  display: flex;
-  gap: 3rem;
+  justify-content: center;
   align-items: center;
-  border-radius: 2rem 2rem 0 0;
-  bottom: 0;
-  right: 1rem;
-  box-sizing: border-box;
-  padding: 5vw 3vw;
-  font-size: 2vw;
-  position: absolute;
-  bottom: 0;
-}
-.aboutMe .card ul {
-  display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: space-between;
 }
-/* aboutMe cross, circle2 */
-.aboutMe .cross {
+.aboutMe .title {
+  font-size: 10vw;
   position: absolute;
+  opacity: 0.2;
+  top: 0rem;
+  left: 1rem;
 }
-.aboutMe .cross.one {
-  left: 7%;
+/* aboutMe top */
+.aboutMe .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 1.3vw;
+}
+.aboutMe .top li:nth-child(1) {
+  border-radius: 1rem;
+  border: 1px dashed #f9f9f9;
+  text-align: center;
+  width: 16vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutMe .top img {
+  width: 15vw;
+  height: 19vw;
+  border-radius: 1rem;
+}
+.aboutMe .top h3 {
+  font-size: 3vw;
+}
+.aboutMe .top li:nth-child(3) {
+  line-height: 2;
+}
+.aboutMe .top i {
+  margin-right: 1.5rem;
+  font-size: 1.5vw;
+}
+.aboutMe .top .sns i {
+  font-size: 2vw;
+  margin-top: 0.5rem;
+}
+/* aboutMe middle */
+.aboutMe .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap: 2rem;
+  width: 68%;
+  margin: 0px auto;
+  font-size: 1.1vw;
+  line-height: 1.8;
+}
+.aboutMe .middle li {
+  display: flex;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.aboutMe .middle h3 {
+  font-size: 1.2vw;
+}
+/* aboutMe bottom */
+.aboutMe .bottom {
+  width: 100%;
+  position: relative;
+  height: 25vh;
+  line-height: 1.5;
+}
+.aboutMe .bottom .wrap {
+  width: 100%;
+  height: 25vh;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.aboutMe .cross.one li {
-  background-color: #1eae98;
-}
-.aboutMe .cross.two {
-  left: 20%;
-  bottom: 10%;
-  transform: rotate(45deg);
-}
-.aboutMe .cross.three {
-  top: -5%;
-  right: 25%;
-  transform: rotate(45deg) scale(0.8);
-}
-.aboutMe .cross.three li {
-  background-color: #ff008e;
-}
-.aboutMe .circle2 {
-  background-color: #1eae98;
+.aboutMe .bottom .wrap .line {
   position: absolute;
-  right: 15%;
-  transform: rotate(180deg);
-  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  border: 1px solid #f9f9f9;
+}
+.aboutMe .bottom ul {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0px auto;
+}
+.aboutMe .bottom p {
+  position: absolute;
+  font-size: 1vw;
+  width: 28vw;
+}
+.aboutMe .bottom p b {
+  font-size: 1.2vw;
+}
+.aboutMe .bottom .t {
+  top: 50%;
+  transform: translateY(-150%);
+}
+.aboutMe .bottom .b {
+  bottom: 50%;
+  transform: translateY(150%);
+}
+.aboutMe .bottom .cir {
+  width: 1vw;
+  height: 1vw;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.aboutMe .bottom li:nth-child(3) .cir,
+.aboutMe .bottom li:nth-child(5) .cir,
+.aboutMe .bottom li:nth-child(8) .cir,
+.aboutMe .bottom li:nth-child(9) .cir {
+  opacity: 0.3;
 }
 
 /* skills */
@@ -1284,8 +1303,6 @@ section {
 }
 
 /* project */
-.project {
-}
 .project .wrap {
   width: 300%;
   display: flex;
@@ -1371,23 +1388,66 @@ section {
 .project .arrow i {
   cursor: pointer;
 }
+.project .nav {
+  width: 20%;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.project .nav::before {
+  width: 70%;
+  height: 2px;
+  background-color: #f9f9f98a;
+  top: 0;
+  content: "";
+  border-radius: 1rem;
+}
+.project .nav .line {
+  width: 0%;
+  background-color: #faef5d;
+  height: 2px;
+  position: absolute;
+  border-radius: 1rem;
+}
+.project .nav .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2vw;
+}
+.project .nav .button i {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.project .nav .button i:hover {
+  color: #faef5d;
+}
 
 /* design */
 .design {
   color: #6499e9;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  overflow: hidden;
 }
 .design .title {
   text-align: center;
-  font-size: 3vw;
-  line-height: 0.6;
-  padding-top: 2rem;
+  font-size: 4vw;
+  line-height: 0.7;
 }
 .design .title span {
   font-size: 2vw;
-  border: 1px dashed #1eae98;
   box-sizing: border-box;
-  padding: 0.2rem;
+  padding: 0.5rem;
 }
 .design .title .photo {
   color: #ff008e;
@@ -1397,6 +1457,136 @@ section {
 }
 .design .title .more {
   color: #f9f9f9;
+}
+/* design list */
+.design .list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 550%;
+  margin-left: 10rem;
+  font-size: 1.5vw;
+}
+.design .list li {
+  width: calc(100% / 17 - 1rem);
+  border: 1px solid #ff008e;
+  height: 65vh;
+  cursor: pointer;
+  color: #ff008e;
+  overflow: hidden;
+}
+.design .list li.d {
+  border-color: #1eae98;
+  color: #1eae98;
+}
+.design .list li.u {
+  border-color: #6499e9;
+  color: #6499e9;
+}
+.design .list li.i {
+  border-color: #faef5d;
+  color: #faef5d;
+}
+.design .list li img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+.design .list li > div {
+  height: 30%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #1a1a1a;
+}
+.design .list h4 {
+  text-align: center;
+  font-size: 2vw;
+  margin-bottom: 0.5rem;
+}
+.design .list li::after {
+  content: "click";
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.design .list li::after {
+  content: "";
+  width: 100%;
+  height: 60%;
+  background: url(../source/index/logo.png) no-repeat center/120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.5s;
+}
+.design .list li::before {
+  content: "click";
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+.design .list li:hover img {
+  filter: brightness(0.5);
+}
+.design .list li:hover::after {
+  opacity: 1;
+  animation: rot 2s infinite linear;
+}
+.design .list li:hover::before {
+  opacity: 1;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* design show */
+.design .list_s {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.201);
+  backdrop-filter: blur(13px);
+  display: none;
+}
+.design .list_s li {
+  height: 70%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.design .list_s img {
+  height: 100%;
+}
+.design .close {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  font-size: 2rem;
+  color: #f9f9f9;
+  display: none;
+  cursor: pointer;
 }
 
 /* contact */
@@ -1685,27 +1875,58 @@ section {
   }
 
   /* aboutme */
-  .aboutMe br {
+  .aboutMe .title {
+    top: 2rem;
+    left: 2rem;
+    font-size: 15vw;
+  }
+  .aboutMe .title br {
     display: none;
   }
-  .aboutMe h2 {
-    font-size: 8vw;
-    text-align: center;
-    padding: 7rem 0 0 0;
+  /* aboutMe top */
+  .aboutMe .top {
+    gap: 2.5rem;
   }
-  .aboutMe .card {
-    gap: 0.5rem;
+  .aboutMe .top h3 {
+    font-size: 3.5vw;
+  }
+  .aboutMe .top i {
+    margin-right: 1rem;
+  }
+  /* aboutMe middle */
+  .aboutMe .middle {
+    font-size: 1.5vw;
+    width: 80%;
+  }
+  .aboutMe .middle h3 {
+    font-size: 1.7vw;
+  }
+  /* aboutMe bottom */
+  .aboutMe .bottom p {
+    font-size: 1.5vw;
+  }
+  .aboutMe .bottom p b {
+    font-size: 1.7vw;
+  }
+
+  /* design */
+  .design .title {
+    font-size: 6vw;
+  }
+  .design .title span {
     font-size: 3vw;
-    width: 100%;
-    right: 7%;
   }
-  .aboutMe .cross.one {
-    left: 5%;
-    top: 18%;
+  /* design list */
+  .design .list {
+    gap: 0.5rem;
+    width: 800%;
+    font-size: 2.5vw;
   }
-  .aboutMe .cross.two {
-    left: 35%;
-    top: 25%;
+  .design .close {
+    font-size: 1.5rem;
+  }
+  .design .list h4 {
+    font-size: 3.5vw;
   }
 }
 
@@ -1784,5 +2005,20 @@ section {
   }
   .cross .lineY li {
     height: calc(100% / 2 - 0.5rem);
+  }
+
+  /* design */
+  /* design list */
+  .design .list {
+    gap: 0.5rem;
+    width: 1300%;
+    font-size: 4vw;
+  }
+  .design .close {
+    right: 4vw;
+    font-size: 1.5rem;
+  }
+  .design .list h4 {
+    font-size: 6vw;
   }
 }
