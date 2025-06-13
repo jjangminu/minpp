@@ -23,7 +23,7 @@ let project = $("#project").offset().top;
 let design = $("#design").offset().top;
 let contact = $("#contact").offset().top;
 
-//header
+//header bat
 $("header .bar").on("click", function () {
   windowX = window.innerWidth;
   $("header .menu_circle").toggleClass("on");
@@ -46,35 +46,47 @@ $("header h1").on("click", function () {
 $(window).on("scroll", function () {
   var scr = $(this).scrollTop();
   if (scr >= visual && scr < vision) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(0).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(0).addClass("on");
+    $("header .fix_menu li").eq(0).addClass("on");
+    $("header .fix_menu li").eq(0).find(".cir").addClass("on");
   } else if (scr >= vision && scr < codingHard) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(1).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(1).addClass("on");
+    $("header .fix_menu li").eq(1).addClass("on");
+    $("header .fix_menu li").eq(1).find(".cir").addClass("on");
   } else if (scr >= codingHard + 500 && scr < project) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(2).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(2).addClass("on");
+    $("header .fix_menu li").eq(2).addClass("on");
+    $("header .fix_menu li").eq(2).find(".cir").addClass("on");
   } else if (scr >= project + 2000 && scr < design + 2000) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(3).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(3).addClass("on");
+    $("header .fix_menu li").eq(3).addClass("on");
+    $("header .fix_menu li").eq(3).find(".cir").addClass("on");
   } else if (scr >= design + 2500 && scr < contact + 2500) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(4).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(4).addClass("on");
+    $("header .fix_menu li").eq(4).addClass("on");
+    $("header .fix_menu li").eq(4).find(".cir").addClass("on");
   } else if (scr >= contact + 3500) {
-    $("header .fix_menu li").removeClass("on");
     $("header .menu li").removeClass("on");
-    $("header .fix_menu li").eq(5).addClass("on");
+    $("header .fix_menu li").removeClass("on");
+    $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(5).addClass("on");
+    $("header .fix_menu li").eq(5).addClass("on");
+    $("header .fix_menu li").eq(5).find(".cir").addClass("on");
   }
 });
 
@@ -86,7 +98,15 @@ $('a[href*="#"]').on("click", function (e) {
   );
   e.preventDefault();
 });
-//header navi click class
+//header navi hover
+$("header .fix_menu li").on("mouseenter", function () {
+  $("header .fix_menu li p").removeClass("on");
+  $(this).find("p").addClass("on");
+});
+$("header .fix_menu li").on("mouseleave", function () {
+  $("header .fix_menu li p").removeClass("on");
+});
+//header navi click
 $("header .menu li").on("click", function () {
   let i = $("li").index(this);
   if (i == 3) {
@@ -95,7 +115,7 @@ $("header .menu li").on("click", function () {
   $("header .menu li").removeClass("on");
   $(this).addClass("on");
 });
-$(" .fix_menu li").on("click", function () {
+$("header .fix_menu li").on("click", function () {
   let i = $("li").index(this);
   console.log(i);
   if (i == 9) {
@@ -510,6 +530,17 @@ gsap.timeline({
     trigger: ".codingHardR",
     start: "top top",
     end: "60% top",
+    scrub: 2,
+    pin: true,
+  },
+});
+
+//codingClone
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".codingClone",
+    start: "top top",
+    end: "50% top",
     scrub: 2,
     pin: true,
   },

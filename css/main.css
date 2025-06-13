@@ -164,33 +164,46 @@ header .menu.on {
 /* header fix menu */
 header .fix_menu {
   position: fixed;
-  height: 120px;
-  width: 7px;
+  height: 130px;
   right: 1rem;
   top: 50%;
   transform: translateY(-35%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   z-index: 20;
 }
 header .fix_menu li {
-  width: 7px;
-  height: 7px;
-  background-color: #f9f9f9;
-  border-radius: 50%;
   opacity: 0.5;
   transition: 0.5s;
 }
 header .fix_menu li.on {
-  transform: scale(1.5);
   opacity: 1;
 }
-header .fix_menu a {
-  width: 10px;
-  height: 10px;
-  display: block;
+header .fix_menu li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .fix_menu .cir {
+  width: 7px;
+  height: 7px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+header .fix_menu .cir.on {
+  transform: scale(1.5);
+}
+header .fix_menu p {
+  opacity: 0;
+  margin-right: -50px;
+  transition: 0.5s;
+}
+header .fix_menu p.on {
+  margin: 0px;
+  opacity: 1;
 }
 
 /* main, section */
@@ -1140,6 +1153,84 @@ section {
 }
 
 /* codingClone */
+.codingClone {
+  position: relative;
+  color: #ff008e;
+}
+.codingClone .titleF {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 10rem;
+}
+.codingClone .titleS {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 10rem;
+}
+.codingClone .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 90%;
+  margin: 0px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.codingClone .wrap > li {
+  width: calc(100% / 3 - 3rem);
+  box-sizing: border-box;
+  padding: 1rem;
+  cursor: pointer;
+  height: 50vh;
+}
+.codingClone .wrap .detail {
+  height: 90%;
+  width: 100%;
+  border-top: 1px solid #ff008e;
+  border-bottom: 1px solid #ff008e;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.codingClone .wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  top: 0px;
+  left: 0px;
+}
+.codingClone .wrap .detail:hover img {
+  opacity: 1;
+}
+.codingClone .wrap .button {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 80%;
+  margin-top: 1rem;
+}
+.codingClone .wrap .button li {
+  width: calc(100% / 3 - 0.5rem);
+  text-align: center;
+  border-radius: 5rem;
+  border: 1px solid #ff008e;
+  transition: 0.5s;
+}
+.codingClone .wrap .button li a {
+  display: block;
+  padding: 0.5rem 0;
+}
+.codingClone .wrap .button li:hover {
+  background-color: #ff008e;
+  color: #1a1a1a;
+}
 
 /* project */
 .project .wrap {
