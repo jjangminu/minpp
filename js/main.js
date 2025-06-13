@@ -536,6 +536,40 @@ gsap.timeline({
 });
 
 //codingClone
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".codingClone",
+      start: "top 60%",
+      end: "20% 10%",
+      scrub: 2,
+    },
+  })
+  .fromTo(
+    ".codingClone .titleF",
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 3 }
+  )
+  .fromTo(
+    ".codingClone .wrap > li:nth-child(1)",
+    { opacity: 0, y: 50 },
+    { y: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(
+    ".codingClone .wrap > li:nth-child(2)",
+    { opacity: 0, y: 50 },
+    { y: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(
+    ".codingClone .wrap > li:nth-child(3)",
+    { opacity: 0, y: 50 },
+    { y: 0, opacity: 1, duration: 3 }
+  )
+  .fromTo(
+    ".codingClone .titleS",
+    { opacity: 0, x: 50 },
+    { x: 0, opacity: 1, duration: 3 }
+  );
 gsap.timeline({
   scrollTrigger: {
     trigger: ".codingClone",

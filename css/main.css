@@ -264,6 +264,11 @@ section {
   border-radius: 5rem;
 }
 
+.fa-arrow-up {
+  transform: rotate(45deg);
+  margin-left: 0.5rem;
+}
+
 /* visual */
 .visual {
   display: flex;
@@ -1157,6 +1162,10 @@ section {
   position: relative;
   color: #ff008e;
 }
+/* codingClone title */
+.codingClone h2 {
+  text-shadow: 5px 5px #faef5d;
+}
 .codingClone .titleF {
   position: absolute;
   top: 5%;
@@ -1169,6 +1178,7 @@ section {
   right: 5%;
   font-size: 10rem;
 }
+/* codingClone wrap */
 .codingClone .wrap {
   display: flex;
   justify-content: space-between;
@@ -1185,8 +1195,13 @@ section {
   box-sizing: border-box;
   padding: 1rem;
   cursor: pointer;
-  height: 50vh;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
+/* codingClone detail */
 .codingClone .wrap .detail {
   height: 90%;
   width: 100%;
@@ -1196,7 +1211,7 @@ section {
   padding: 1rem;
   box-sizing: border-box;
 }
-.codingClone .wrap img {
+.codingClone .wrap .detail .imageB {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1209,15 +1224,22 @@ section {
 .codingClone .wrap .detail:hover img {
   opacity: 1;
 }
+.codingClone .wrap .detail h3 {
+  font-size: 3rem;
+}
+.codingClone .wrap .detail p {
+  margin: 0.5rem 0;
+}
+/* codingClone button */
 .codingClone .wrap .button {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  width: 80%;
-  margin-top: 1rem;
+  width: 90%;
+  font-size: 0.9rem;
 }
 .codingClone .wrap .button li {
-  width: calc(100% / 3 - 0.5rem);
+  width: calc(100% / 3 - 0.7rem);
   text-align: center;
   border-radius: 5rem;
   border: 1px solid #ff008e;
@@ -1225,7 +1247,7 @@ section {
 }
 .codingClone .wrap .button li a {
   display: block;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
 }
 .codingClone .wrap .button li:hover {
   background-color: #ff008e;
