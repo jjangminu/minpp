@@ -782,7 +782,7 @@ section {
   box-sizing: border-box;
   font-size: 1.3vw;
 }
-.aboutMe .top li:nth-child(1) {
+.aboutMe .top > li:nth-child(1) {
   border-radius: 1rem;
   border: 1px dashed #f9f9f9;
   text-align: center;
@@ -797,19 +797,43 @@ section {
   height: 19vw;
   border-radius: 1rem;
 }
-.aboutMe .top h3 {
-  font-size: 3vw;
+.aboutMe .top li:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
-.aboutMe .top li:nth-child(3) {
-  line-height: 2;
+.aboutMe .top h3 {
+  font-size: 2.3vw;
 }
 .aboutMe .top i {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   font-size: 1.5vw;
 }
 .aboutMe .top .sns i {
-  font-size: 2vw;
-  margin-top: 0.5rem;
+  font-size: 1.7vw;
+}
+.aboutMe .top li:nth-child(3) {
+  line-height: 2;
+  display: flex;
+  gap: 1rem;
+  background-color: #f9f9f970;
+  border-radius: 1rem;
+}
+.aboutMe .top .skillWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.aboutMe .top .skillWrap img {
+  width: calc(100% / 4 - 1rem);
+  height: calc(100% / 4 - 1rem);
 }
 /* aboutMe middle */
 .aboutMe .middle {
