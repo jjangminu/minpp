@@ -58,7 +58,7 @@ h1 {
 
 .back_fix {
   position: fixed;
-  top: 5.5  rem;
+  top: 5.5 rem;
   left: 1rem;
 }
 
@@ -1064,6 +1064,32 @@ h1 {
     transition: 0.5s;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     z-index: 10;
+  }
+  header .search {
+    background-color: #223044;
+    border: 1px solid #364861;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  header .search input {
+    width: 350px;
+    background-color: #223044;
+    border: none;
+    color: white;
+  }
+  header .search button {
+    padding: 0.5rem 1.5rem;
+    background-color: #364861;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  header .search button:hover {
+    background-color: #71829b;
   }
   /*navi*/
   header ul {
