@@ -66,7 +66,7 @@ $(window).on("scroll", function () {
     $("header .menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).find(".cir").addClass("on");
-  } else if (scr >= project + 2000 && scr < design + 2000) {
+  } else if (scr >= project + 3000 && scr < design + 3000) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
@@ -80,7 +80,7 @@ $(window).on("scroll", function () {
     $("header .menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).find(".cir").addClass("on");
-  } else if (scr >= contact + 3500) {
+  } else if (scr >= contact + 5000) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
