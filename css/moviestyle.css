@@ -56,10 +56,11 @@ h1 {
   font-family: "PyeongChangPeace-Bold";
 }
 
-.back_fix {
+.home {
   position: fixed;
-  top: 5.5 rem;
+  top: 7vw;
   left: 1rem;
+  z-index: 1;
 }
 
 /*mobile*/
@@ -87,6 +88,35 @@ h1 {
   header i {
     font-size: 1.3rem;
     cursor: pointer;
+  }
+  /* header search */
+  header .search {
+    background-color: #223044;
+    border: 1px solid #364861;
+    box-sizing: border-box;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+  header .search input {
+    width: 80px;
+    background-color: #223044;
+    border: none;
+    color: white;
+  }
+  header .search button {
+    padding: 0.2rem 0.5rem;
+    background-color: #364861;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 0.8rem;
+  }
+  header .search button:hover {
+    background-color: #71829b;
   }
   /*navi*/
   header ul {
@@ -119,10 +149,13 @@ h1 {
   header h1 {
     color: gold;
   }
-  header nav {
-  }
   header .close {
     display: none;
+  }
+
+  .home {
+    top: 5rem;
+    font-size: 0.8rem;
   }
 
   /*main*/
@@ -582,6 +615,33 @@ h1 {
     font-size: 1.5rem;
     cursor: pointer;
   }
+  /* header search */
+  header .search {
+    background-color: #223044;
+    border: 1px solid #364861;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  header .search input {
+    width: 200px;
+    background-color: #223044;
+    border: none;
+    color: white;
+  }
+  header .search button {
+    padding: 0.5rem 1.5rem;
+    background-color: #364861;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  header .search button:hover {
+    background-color: #71829b;
+  }
   /*navi*/
   header ul {
     position: absolute;
@@ -614,15 +674,17 @@ h1 {
   header h1 {
     color: gold;
   }
-  header nav {
-  }
   header .close {
     display: none;
   }
 
+  .home {
+    top: 5rem;
+  }
+
   /*main*/
   main {
-    margin-top: 6.5rem;
+    padding-top: 6.5rem;
   }
   /*main title*/
   main h2 {
@@ -1065,6 +1127,7 @@ h1 {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     z-index: 10;
   }
+  /* header search */
   header .search {
     background-color: #223044;
     border: 1px solid #364861;
@@ -1121,7 +1184,7 @@ h1 {
 
   /*main*/
   main {
-    margin-top: 6.5rem;
+    padding-top: 6.5rem;
   }
   /*main title*/
   main h2 {

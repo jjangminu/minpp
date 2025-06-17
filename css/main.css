@@ -1099,6 +1099,10 @@ section {
 .codingHard .wrap .title {
   font-size: 5vw;
 }
+.codingHard .wrap .detail a {
+  text-decoration: underline;
+  color: #faef5d;
+}
 /* codingHard icon */
 .codingHard .icon {
   background-color: #6499e970;
@@ -1141,6 +1145,7 @@ section {
 .codingHard li.image img {
   width: 85%;
 }
+/* codingHard li 별 css */
 .codingHardF .wrap {
   color: #6499e9;
 }
