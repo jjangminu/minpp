@@ -29,19 +29,21 @@
 
     <!--뒤로가기-->
     <div class="home">
-      <a href="index.html"><i class="fa-solid fa-angles-left"></i>뒤로가기</a>
+      <a href="main.html"><i class="fa-solid fa-angles-left"></i>뒤로가기</a>
     </div>
 
     <div class="wrap">
+      <!-- left weather news -->
       <div class="weather_news">
         <div class="month_weather">
-          <h3>May Forecast</h3>
-          ☀ 평년기온 17.0~17.6<br />🌧 평년강수 75.1~115.0mm<br />동인도양과
-          북인도양의 높은 해수면온도로 인해 우리나라 동쪽을 중심으로 고기압성
-          순환이 형성되어 기온이 상승하고 강수량이 많아질 가능성이 있으나,
-          동유럽의 적은 눈덮임으로 인해 강수량이 감소할 가능성도 있겠습니다.
-          (월평균기온) 평년(17.0~17.6℃)보다 높을 확률이 50%입니다. (월강수량)
-          평년(75.1~115.0㎜)과 비슷할 확률이 50%입니다.
+          <h3>June Forecast</h3>
+          ☀ 평년기온 21.5~22.1<br />
+          🌧 평년강수 86.3~125.5mm<br />동인도양과 북인도양과 열대 서태평양
+          부근의 높은 해수면온도로 인해 우리나라 부근에 고기압성 순환이
+          강화되면서 고온다습한 기류의 유입이 강화되어 기온이 상승하고 강수량이
+          많아질 가능성이 있겠습니다. (월평균기온) 평년(21.5~22.1℃)과 비슷할
+          확률이 50%입니다. (월강수량) 평년(86.3~125.5㎜)과 비슷하거나 많을
+          확률이 각각 40% 입니다. [출처 : 네이버]
         </div>
 
         <div class="calendar_wrap">
@@ -50,7 +52,7 @@
               <button class="left">
                 <i class="fa-solid fa-angle-left"></i>
               </button>
-              <h3 class="current-date">April 2025</h3>
+              <h3 id="current-date" class="current-date">June 2025</h3>
               <button class="right">
                 <i class="fa-solid fa-angle-right"></i>
               </button>
@@ -66,43 +68,7 @@
               <li>Fri</li>
               <li>Sat</li>
             </ul>
-            <ul class="days">
-              <li class="inactive">27</li>
-              <li class="inactive">28</li>
-              <li class="inactive">29</li>
-              <li class="inactive">30</li>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-              <li>7</li>
-              <li>8</li>
-              <li>9</li>
-              <li>10</li>
-              <li>11</li>
-              <li>12</li>
-              <li>13</li>
-              <li>14</li>
-              <li>15</li>
-              <li>16</li>
-              <li>17</li>
-              <li>18</li>
-              <li>19</li>
-              <li>20</li>
-              <li>21</li>
-              <li>22</li>
-              <li>23</li>
-              <li>24</li>
-              <li>25</li>
-              <li>26</li>
-              <li>27</li>
-              <li>28</li>
-              <li>29</li>
-              <li>30</li>
-              <li>31</li>
-            </ul>
+            <ul id="days" class="days"></ul>
           </div>
         </div>
       </div>
@@ -181,6 +147,8 @@
           </div>
         </div>
       </div>
+
+      <!-- right weather image -->
       <div class="weather_image">
         <ul
           ontouchstart="startDrag(event)"
@@ -188,18 +156,26 @@
           ontouchend="endDrag(event)"
         >
           <li>
-            <img src="source/weather_source/pic1.jpg" />
+            <img src="source/weather_source/pic1.png" alt="" />
           </li>
           <li>
-            <img src="source/weather_source/pic2.jpg" />
+            <img src="source/weather_source/pic2.png" alt="" />
           </li>
           <li>
-            <img src="source/weather_source/pic3.jpg" />
+            <img src="source/weather_source/pic3.png" alt="" />
           </li>
           <li>
-            <img src="source/weather_source/pic5.jpg" />
+            <img src="source/weather_source/pic4.png" alt="" />
           </li>
-          <li><img src="source/weather_source/pic4.jpg" /></li>
+          <li>
+            <img src="source/weather_source/pic5.png" alt="" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic6.png" alt="" />
+          </li>
+          <li>
+            <img src="source/weather_source/pic7.png" alt="" />
+          </li>
         </ul>
       </div>
     </div>
