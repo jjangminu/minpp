@@ -66,7 +66,7 @@ $(window).on("scroll", function () {
     $("header .menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).find(".cir").addClass("on");
-  } else if (scr >= project + 3000 && scr < design + 3000) {
+  } else if (scr >= project + 2000 && scr < design + 2000) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
@@ -80,7 +80,7 @@ $(window).on("scroll", function () {
     $("header .menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).find(".cir").addClass("on");
-  } else if (scr >= contact + 5000) {
+  } else if (scr >= contact + 3500) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
@@ -548,7 +548,7 @@ gsap
   .fromTo(
     ".codingClone .titleF",
     { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3 }
+    { opacity: 1, x: 0, duration: 3, "text-shadow": "5px 5px #faef5d" }
   )
   .fromTo(
     ".codingClone .wrap > li:nth-child(1)",
@@ -568,7 +568,7 @@ gsap
   .fromTo(
     ".codingClone .titleS",
     { opacity: 0, x: 50 },
-    { x: 0, opacity: 1, duration: 3 }
+    { x: 0, opacity: 1, duration: 3, "text-shadow": "5px 5px #faef5d" }
   );
 gsap.timeline({
   scrollTrigger: {

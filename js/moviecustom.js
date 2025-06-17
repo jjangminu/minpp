@@ -23,6 +23,7 @@ let now = document.querySelector("#now");
 let popular = document.querySelector("#popular");
 let rated = document.querySelector("#rated");
 let upcoming = document.querySelector("#upcoming");
+let search = document.querySelector("#search");
 
 //scroll 함수
 window.addEventListener("scroll", function () {
@@ -82,7 +83,6 @@ let popularBackAverage = document.querySelectorAll("#popularWrap .back p");
 let popular_movie = async () => {
   let response = await fetch(popular_url);
   let data = await response.json();
-  console.log(data);
 
   let frontcount = popularFront.length - 1;
   let backcount = popularBack.length - 1;
@@ -134,7 +134,6 @@ let nowLike = document.querySelectorAll("#nowWrap .like");
 let now_movie = async () => {
   let response = await fetch(now_url);
   let data = await response.json();
-  console.log(data);
 
   count = nowItems.length - 1;
 
@@ -183,7 +182,6 @@ let rated_right = document.querySelector("#rated .right");
 let rated_movie = async () => {
   let response = await fetch(rated_url);
   let data = await response.json();
-  console.log(data);
 
   let count = ratedItems.length - 1;
 
@@ -288,7 +286,6 @@ let today = new Date();
 let upcoming_movie = async () => {
   let response = await fetch(upcoming_url);
   let data = await response.json();
-  console.log(data);
 
   count = upcomingItems.length - 1;
 
@@ -315,3 +312,84 @@ upcomingButton.addEventListener("click", () => {
   upcomingWrap.classList.toggle("open");
   upcomingAngle.classList.toggle("turn");
 });
+
+//search
+let searchI = document.querySelector("header .search input");
+let searchB = document.querySelector("header .search button");
+let searchT = document.querySelector("#search .title .value");
+let searchR = document.querySelector("#search .results");
+//검색창에 텍스트 입력 시 바로 실행
+searchI.addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  if (inputValue === "") {
+    // 텍스트가 비어있을 때 실행할 코드
+    visualBanner.classList.remove(".hidden");
+    now.classList.remove("hidden");
+    popular.classList.remove("hidden");
+    rated.classList.remove("hidden");
+    upcoming.classList.remove("hidden");
+    search.classList.add("hidden");
+  } else {
+    // 텍스트가 있을 때 실행할 코드
+    visualBanner.classList.add("hidden");
+    now.classList.add("hidden");
+    popular.classList.add("hidden");
+    rated.classList.add("hidden");
+    upcoming.classList.add("hidden");
+    search.classList.remove("hidden");
+  }
+
+  searchT.innerHTML = inputValue;
+  const query = inputValue.trim();
+  if (query) {
+    searchMovies(query);
+  }
+});
+
+//검색어를 가져와 api연결
+async function searchMovies(query) {
+  //api url 연결
+  const search_url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${encodeURIComponent(
+    query
+  )}&language=ko`;
+
+  //잘 가져오면 res에 fetch를 담은 후 data에 json으로 변환하여 넣고 data를 화면에 뿌려질 함수에 값을 전달
+  try {
+    const res = await fetch(search_url);
+    const data = await res.json();
+    displayMovies(data.results);
+  } catch (error) {
+    //오류가 있을 시 console창에 오류를 보여줌
+    console.error("영화 정보를 가져오는 중 오류 발생:", error);
+  }
+}
+
+//화면에 뿌려질 카드 함수
+function displayMovies(movies) {
+  console.log(movies);
+  //초기화
+  searchR.innerHTML = "";
+
+  //검색결과가 없을 때 보여지는 텍스트
+  if (movies.length === 0) {
+    searchR.innerHTML = "<p></p>";
+    return;
+  }
+
+  //검색결과만큼 카드생성 후 화면에 보여짐
+  movies.forEach((movie) => {
+    const card = document.createElement("div");
+    card.classList.add("movie-card");
+
+    const posterPath = movie.poster_path
+      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+      : "https://via.placeholder.com/200x300?text=No+Image";
+    card.innerHTML = `
+      <img src="${posterPath}" alt="${movie.title}">
+      <h3>${movie.title}</h3>
+      <p>개봉일: ${movie.release_date || "정보 없음"}</p>
+    `;
+
+    searchR.appendChild(card);
+  });
+}

@@ -77,7 +77,6 @@ getLocation = () => {
 success = async (position) => {
   lat = position.coords.latitude;
   lon = position.coords.longitude;
-  console.log(lat, lon);
 
   let response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=kr&appid=${APIkey}&units=metric`
@@ -85,7 +84,6 @@ success = async (position) => {
 
   //정보를 json형식으로 변경하여 data에 넣음
   let data = await response.json();
-  console.log(data);
 
   render(data);
 
@@ -96,7 +94,6 @@ success = async (position) => {
 
   //정보를 json형식으로 변경하여 data에 넣음
   let data2 = await response2.json();
-  console.log(data2);
 
   render2(data2);
 };
@@ -106,7 +103,6 @@ getLocation();
 btn.addEventListener("click", async () => {
   //입력한 city명을 가져옴
   cityname = input.value;
-  console.log(cityname);
 
   weather(cityname);
 
@@ -118,7 +114,6 @@ btn.addEventListener("click", async () => {
 
   //정보를 json형식으로 변경하여 data에 넣음
   let data2 = await response2.json();
-  console.log(data2);
 
   render2(data2);
 });
@@ -132,7 +127,6 @@ weather = async (cityname) => {
 
   //정보를 json형식으로 변경하여 data에 넣음
   let data = await response.json();
-  console.log(data);
 
   render(data);
 
@@ -143,7 +137,6 @@ weather = async (cityname) => {
 
   //정보를 json형식으로 변경하여 data에 넣음
   let data2 = await response2.json();
-  console.log(data2);
 
   render2(data2);
 };
@@ -323,35 +316,87 @@ render2 = (data2) => {
   seven_icon.src = madeIcon3;
 };
 
-calendarCoding = () => {
-  const currYear = today.getFullYear(),
-    currMonth = today.getMonth();
+const calendarDates = document.getElementById("days");
+const currentMonthElement = document.getElementById("current-date");
+const prevBtn = document.querySelector(".calendar_wrap .left");
+const nextBtn = document.querySelector(".calendar_wrap .right");
 
-  console.log(today);
-  console.log(currYear);
-  console.log(currMonth);
+//월 이름을 영어로 바꾸기
+let monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+let currentMonth = today.getMonth();
+let currentYear = today.getFullYear();
+let currentdate = today.getDate();
 
-  console.log(months[currMonth]);
-};
-calendarCoding();
+/* 월별 캘랜더를 생성하고 표시 */
+function renderCalendar() {
+  /* 현재 월의 첫 번째 날짜를 나타내는 Date 객체를 저장 해당 월의 첫 번째 날짜에 대한 정보를 얻는다. */
+  const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
 
-//weather img roll
-// 요소 & 사이즈
-const weatherImgwrap = document.querySelector(".weather_image ul");
-const wrapScrollWidth = weatherImgwrap.scrollWidth;
-const wrapClientWidth = weatherImgwrap.clientWidth;
+  /* 현재 월의 총 일 수를 나타내는 값을 저장 
+  해당 월이 몇 일까지 있는지 알 수 있다. */
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+  /* 현재 월의 첫 번째 날짜의 요일을 나타내는 값을 저장 해당 월의 첫 번째 날짜가 무슨 요일인지 알 수 있다. */
+  const startDayOfWeek = firstDayOfMonth.getDay();
+
+  // 월을 나타내는 요소에 현재 월과 연도를 설정하여 표시한다.
+  let currentMonthName = monthNames[currentMonth];
+  currentMonthElement.textContent = `${currentMonthName} ${currentYear} `;
+  // 일자를 표시하는 그리드 컨테이너를 비운다.
+  calendarDates.innerHTML = "";
+
+  // 빈 날짜(이전 달)
+  for (let i = 0; i < startDayOfWeek; i++) {
+    const emptyDate = document.createElement("li");
+    //  빈 날짜를 나타내는 div 요소를 생성한다.
+    emptyDate.classList.add("date", "empty");
+    // 생성한 div 요소에 "date"와 "empty" 클래스를 추가한다.
+    calendarDates.appendChild(emptyDate);
+    // 생성한 빈 날짜 요소를 캘린더 그리드에 추가한다.
+  }
+
+  // 현재 달의 날짜
+  for (let i = 1; i <= daysInMonth; i++) {
+    const dateElement = document.createElement("li");
+    dateElement.classList.add("date");
+    dateElement.textContent = i;
+    calendarDates.appendChild(dateElement);
+  }
+  const calendarDate = document.querySelectorAll("#days li");
+
+  calendarDate[currentdate].classList.remove("active");
+  calendarDate[currentdate - 1].classList.add("active");
+}
+renderCalendar();
+
+prevBtn.addEventListener("click", () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  renderCalendar();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  renderCalendar();
+});

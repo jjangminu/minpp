@@ -25,6 +25,12 @@ a {
   text-decoration: none;
   color: unset;
 }
+
+body {
+  overflow-x: hidden;
+  padding-top: 1rem;
+}
+
 .home {
   position: fixed;
   top: 1rem;
@@ -386,13 +392,13 @@ a {
     border-radius: 50%;
     z-index: -1;
   }
-  .days li:hover::before,
-  .days li:nth-child(17)::before {
+  .days li:hover::before {
     background: #f2f2f2;
     background-color: orange;
   }
   .days li.active::before {
-    background: #008aff;
+    background: #f2f2f2;
+    background-color: orange;
   }
 
   .weather_main {

@@ -22,7 +22,7 @@ body::after {
   content: "";
   z-index: 50;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.04;
 }
 
 /* header top */
@@ -266,7 +266,6 @@ section {
 
 .fa-arrow-up {
   transform: rotate(45deg);
-  margin-left: 0.5rem;
 }
 
 /* visual */
@@ -810,7 +809,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-.aboutMe .top img {
+.aboutMe .top > li:nth-child(1) img {
   width: 15vw;
   height: 19vw;
   border-radius: 1rem;
@@ -947,20 +946,19 @@ section {
   display: flex;
   position: absolute;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
   z-index: 2;
   top: 20%;
 }
 .skills li {
-  width: calc(100% / 5 - 1rem);
+  width: calc(100% / 8 - 0.5rem);
   text-align: center;
-  font-size: 2.5vw;
-  background-color: #6499e9;
+  font-size: 1.8vw;
   border-radius: 5rem;
-  color: #1a1a1a;
   height: fit-content;
-  padding: 1.5vw 0;
+  padding: 1.2vw 0;
+  border: 1px solid;
 }
 .skills .top .wrap01 {
   animation: aniScroll 15s linear infinite;
@@ -975,28 +973,68 @@ section {
   animation: aniScroll_4 15s linear infinite;
 }
 .skills .top li:nth-child(1) {
-  background-color: #ff008e;
+  border-color: #ff008e;
+  color: #ff008e;
 }
 .skills .top li:nth-child(2) {
-  background-color: #1eae98;
+  border-color: #1eae98;
+  color: #1eae98;
+}
+.skills .top li:nth-child(3) {
+  border-color: #faef5d;
+  color: #faef5d;
 }
 .skills .top li:nth-child(4) {
-  background-color: #faef5d;
+  border-color: #6499e9;
+  color: #6499e9;
 }
 .skills .top li:nth-child(5) {
-  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+  color: #f9f9f9;
+}
+.skills .top li:nth-child(6) {
+  border-color: #1eae98;
+  color: #1eae98;
+}
+.skills .top li:nth-child(7) {
+  border-color: #faef5d;
+  color: #faef5d;
+}
+.skills .top li:nth-child(8) {
+  border-color: #6499e9;
+  color: #6499e9;
 }
 .skills .bottom li:nth-child(1) {
-  background-color: #faef5d;
+  border-color: #faef5d;
+  color: #faef5d;
 }
 .skills .bottom li:nth-child(2) {
-  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+  color: #f9f9f9;
 }
 .skills .bottom li:nth-child(3) {
-  background-color: #ff008e;
+  border-color: #1eae98;
+  color: #1eae98;
 }
 .skills .bottom li:nth-child(4) {
-  background-color: #1eae98;
+  border-color: #ff008e;
+  color: #ff008e;
+}
+.skills .bottom li:nth-child(5) {
+  border-color: #6499e9;
+  color: #6499e9;
+}
+.skills .bottom li:nth-child(6) {
+  border-color: #f9f9f9;
+  color: #f9f9f9;
+}
+.skills .bottom li:nth-child(7) {
+  border-color: #1eae98;
+  color: #1eae98;
+}
+.skills .bottom li:nth-child(8) {
+  border-color: #ff008e;
+  color: #ff008e;
 }
 @keyframes aniScroll {
   0% {
@@ -1061,19 +1099,25 @@ section {
 .codingHard .wrap .title {
   font-size: 5vw;
 }
+.codingHard .wrap .detail a {
+  text-decoration: underline;
+  color: #faef5d;
+}
 /* codingHard icon */
 .codingHard .icon {
-  width: 50%;
   background-color: #6499e970;
   box-sizing: border-box;
-  padding: 2rem 0;
   gap: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 2rem;
+  width: 50%;
+  padding: 2rem 0;
 }
 .codingHard .icon img {
-  width: 25%;
+  width: calc(100% / 3.5 - 1rem);
+  height: 80%;
 }
 /* codingHard button */
 .codingHard .wrap .button {
@@ -1101,6 +1145,7 @@ section {
 .codingHard li.image img {
   width: 85%;
 }
+/* codingHard li 별 css */
 .codingHardF .wrap {
   color: #6499e9;
 }
@@ -1163,9 +1208,6 @@ section {
   color: #ff008e;
 }
 /* codingClone title */
-.codingClone h2 {
-  text-shadow: 5px 5px #faef5d;
-}
 .codingClone .titleF {
   position: absolute;
   top: 5%;
@@ -1208,7 +1250,6 @@ section {
   border-top: 1px solid #ff008e;
   border-bottom: 1px solid #ff008e;
   position: relative;
-  padding: 1rem;
   box-sizing: border-box;
 }
 .codingClone .wrap .detail .imageB {
@@ -1216,13 +1257,25 @@ section {
   height: 100%;
   object-fit: cover;
   position: absolute;
-  opacity: 0;
   transition: 0.5s;
   top: 0px;
   left: 0px;
+  filter: brightness(0.5);
+  opacity: 0.5;
 }
 .codingClone .wrap .detail:hover img {
   opacity: 1;
+}
+.codingClone .wrap .detail .detailWrap {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.5s;
+  top: 0px;
+  left: 0px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .codingClone .wrap .detail h3 {
   font-size: 3rem;
