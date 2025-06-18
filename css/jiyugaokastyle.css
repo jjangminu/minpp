@@ -451,7 +451,8 @@ body {
   /*con03*/
   .con03 {
     padding: 5rem 0rem;
-    background: url(../img/main_brand_bg.jpg) no-repeat bottom;
+    background: url(../source/jiyugaoka_source/main_brand_bg.jpg) no-repeat
+      bottom;
     background-size: cover;
   }
   .con03 .wrap {
@@ -564,7 +565,7 @@ body {
     color: white;
     width: 100%;
     margin: 0px auto;
-    background-image: url(../img/main_menu_bg_m.jpg);
+    background-image: url(../source/jiyugaoka_source/main_menu_bg_m.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     background-attachment: fixed;
@@ -1215,7 +1216,8 @@ body {
   /*con03*/
   .con03 {
     padding: 5rem 0rem;
-    background: url(../img/main_brand_bg.jpg) no-repeat bottom;
+    background: url(../source/jiyugaoka_source/main_brand_bg.jpg) no-repeat
+      bottom;
     background-size: cover;
   }
   .con03 .wrap {
@@ -1336,7 +1338,7 @@ body {
     width: 85%;
     width: 100%;
     margin: 0px auto;
-    background-image: url(../img/main_menu_bg_m.jpg);
+    background-image: url(../source/jiyugaoka_source/main_menu_bg_m.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     background-attachment: fixed;
@@ -1947,7 +1949,8 @@ body {
   /*con03*/
   .con03 {
     padding: 5rem 0rem 10rem;
-    background: url(../img/main_brand_bg.jpg) no-repeat bottom;
+    background: url(../source/jiyugaoka_source/main_brand_bg.jpg) no-repeat
+      bottom;
     background-size: cover;
   }
   .con03 .wrap {
@@ -2070,7 +2073,7 @@ body {
     width: 100%;
     margin: 0px auto;
 
-    background-image: url(../img/main_menu_bg_m.jpg);
+    background-image: url(../source/jiyugaoka_source/main_menu_bg_m.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     background-attachment: fixed;
