@@ -223,12 +223,14 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     border: 0px;
     color: white;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
   .push button {
     width: calc(20% - 0.5rem);
     background-color: rgba(255, 255, 255, 0.2);
     border: 0px;
     color: white;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
 
   /*country*/
@@ -248,6 +250,7 @@ body {
     text-align: center;
     text-decoration: none;
     color: white;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
 
   /*detail*/
@@ -264,6 +267,7 @@ body {
     box-sizing: border-box;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     gap: 0.5rem;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
   #iconImg {
     width: 200px;
@@ -297,6 +301,7 @@ body {
     gap: 0.5rem;
     padding: 1rem;
     border-radius: 15px;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
   #time_wrap img {
     width: 50px;
@@ -324,6 +329,7 @@ body {
     padding: 0.5rem;
     align-items: center;
   }
+  /* left */
   .weather_news {
     width: calc(100% / 3 - 2rem);
     margin: auto 0rem;
@@ -333,12 +339,13 @@ body {
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 1rem;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
   .weather_news h3 {
     text-align: center;
     font-size: 1.5rem;
   }
-
+  /* calendar */
   .calendar_wrap {
     width: 100%;
   }
@@ -355,7 +362,6 @@ body {
     color: white;
     font-size: 1.5rem;
   }
-
   .calendar ul {
     display: flex;
     list-style: none;
@@ -400,11 +406,11 @@ body {
     background: #f2f2f2;
     background-color: orange;
   }
-
+  /* center */
   .weather_main {
     width: 500px;
   }
-
+  /* right */
   .weather_image {
     width: 20%;
     height: 92vh;
@@ -414,6 +420,7 @@ body {
     box-sizing: border-box;
     border-radius: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    backdrop-filter: brightness(0.9) blur(25px);
   }
   .weather_image ul {
     display: flex;
