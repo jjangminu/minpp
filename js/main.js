@@ -751,7 +751,7 @@ ScrollTrigger.matchMedia({
         scrollTrigger: {
           trigger: ".contact",
           start: "top 80%",
-          end: "top 40%",
+          end: "top 20%",
           scrub: 5,
         },
       })
@@ -761,9 +761,34 @@ ScrollTrigger.matchMedia({
         { opacity: 1, x: 0, duration: 5 }
       )
       .fromTo(
+        ".contact .top .circle.one",
+        { x: 180, opacity: 0 },
+        { x: 0, opacity: 1, duration: 5 }
+      )
+      .fromTo(
         ".contact .top .cross",
         { rotation: 0, opacity: 0 },
         { rotation: 180, opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".contact .top .circle.three",
+        { y: -180, opacity: 0 },
+        { y: 0, opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".contact .top .circle.two",
+        { y: -180, opacity: 0 },
+        { y: 0, opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".contact .middle .circle.two",
+        { y: 80, x: 15, opacity: 0 },
+        { y: 0, x: 0, opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".contact .middle .circle.one",
+        { x: 20, opacity: 0 },
+        { x: 0, opacity: 1, duration: 5 }
       )
       .fromTo(
         ".contact .bottom .cross",
@@ -771,9 +796,19 @@ ScrollTrigger.matchMedia({
         { rotation: 135, opacity: 1, x: 0, y: 0, duration: 5 }
       )
       .fromTo(
+        ".contact .bottom .circle2",
+        { x: 50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 5 }
+      )
+      .fromTo(
         ".contact .bottom .txt",
         { opacity: 0, x: 500 },
         { opacity: 1, x: 0, duration: 5 }
+      )
+      .fromTo(
+        ".contact .bottom .circle",
+        { x: -50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 5 }
       );
   },
 
