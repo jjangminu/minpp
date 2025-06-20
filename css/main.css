@@ -477,13 +477,21 @@ section {
 }
 /* visual animation */
 @keyframes movB1 {
+  50% {
+    opacity: 1;
+  }
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
+    opacity: 0;
   }
 }
 @keyframes movB2 {
+  50% {
+    opacity: 1;
+  }
   100% {
-    transform: translateY(200px);
+    transform: translateY(100px);
+    opacity: 0;
   }
 }
 @keyframes xb {
@@ -1208,19 +1216,19 @@ section {
 .codingClone {
   position: relative;
   color: #ff008e;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 /* codingClone title */
-.codingClone .titleF {
-  position: absolute;
-  top: 5%;
-  left: 5%;
+.codingClone h2 {
   font-size: 8rem;
+  width: 90%;
 }
 .codingClone .titleS {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  font-size: 8rem;
+  text-align: right;
 }
 /* codingClone wrap */
 .codingClone .wrap {
@@ -1229,10 +1237,6 @@ section {
   gap: 1rem;
   width: 90%;
   margin: 0px auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .codingClone .wrap > li {
   width: calc(100% / 3 - 1rem);
@@ -2189,6 +2193,7 @@ section {
   .visual {
     padding: 3rem 0;
     gap: 0.5rem;
+    background-color: orange;
   }
   .visual .top,
   .visual .middle,
@@ -2441,6 +2446,7 @@ section {
   }
   .codingClone .wrap > li {
     width: 100%;
+    height: calc(100% / 3 - 1rem);
   }
   /* codingClone detail */
   .codingClone .wrap .detail h3 {
@@ -2451,7 +2457,6 @@ section {
   }
 
   /* project */
-
   /* project wrap text */
   .project .wrap .detail {
     font-size: 0.8rem;
