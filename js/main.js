@@ -59,28 +59,28 @@ $(window).on("scroll", function () {
     $("header .menu li").eq(1).addClass("on");
     $("header .fix_menu li").eq(1).addClass("on");
     $("header .fix_menu li").eq(1).find(".cir").addClass("on");
-  } else if (scr >= codingHard + 500 && scr < project) {
+  } else if (scr >= codingHard + 600 && scr < project) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).addClass("on");
     $("header .fix_menu li").eq(2).find(".cir").addClass("on");
-  } else if (scr >= project + 2000 && scr < design + 2000) {
+  } else if (scr >= project + 2500 && scr < design + 2500) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(3).addClass("on");
     $("header .fix_menu li").eq(3).addClass("on");
     $("header .fix_menu li").eq(3).find(".cir").addClass("on");
-  } else if (scr >= design + 2500 && scr < contact + 2500) {
+  } else if (scr >= design + 3500 && scr < contact + 3500) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
     $("header .menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).addClass("on");
     $("header .fix_menu li").eq(4).find(".cir").addClass("on");
-  } else if (scr >= contact + 3500) {
+  } else if (scr >= contact + 4500) {
     $("header .menu li").removeClass("on");
     $("header .fix_menu li").removeClass("on");
     $("header .fix_menu li .cir").removeClass("on");
@@ -100,10 +100,13 @@ $('a[href*="#"]').on("click", function (e) {
 });
 //header navi hover
 $("header .fix_menu li").on("mouseenter", function () {
+  $("header .fix_menu li p").stop().fadeOut(500);
   $("header .fix_menu li p").removeClass("on");
+  $(this).find("p").stop().fadeIn(500);
   $(this).find("p").addClass("on");
 });
 $("header .fix_menu li").on("mouseleave", function () {
+  $("header .fix_menu li p").stop().fadeOut(500);
   $("header .fix_menu li p").removeClass("on");
 });
 //header navi click
@@ -127,484 +130,657 @@ $("header .fix_menu li").on("click", function () {
 
 var tl = gsap.timeline();
 
-//visual pinSpacing
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".visual",
-      start: "",
-      end: "",
-      scrub: 2,
-      pin: true,
-      pinSpacing: false,
-    },
-  })
-  .fromTo(
-    ".vision .top",
-    { opacity: 0, backgroundColor: "#1a1a1a" },
-    { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
-  )
-  .fromTo(
-    ".vision .bottom",
-    { opacity: 0, backgroundColor: "#1a1a1a" },
-    { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
-  );
+ScrollTrigger.matchMedia({
+  "(min-width:750px)": function () {
+    //visual pinSpacing
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".visual",
+          start: "",
+          end: "",
+          scrub: 2,
+          pin: true,
+          pinSpacing: false,
+        },
+      })
+      .fromTo(
+        ".vision .top",
+        { opacity: 0, backgroundColor: "#1a1a1a" },
+        { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
+      )
+      .fromTo(
+        ".vision .bottom",
+        { opacity: 0, backgroundColor: "#1a1a1a" },
+        { opacity: 1, duration: 5, backgroundColor: "#6499e9" }
+      );
 
-//vision
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".vision",
-      start: "top 70%",
-      end: "top top",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".vision .circleL .one",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".vision .circleL .two",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".vision .now",
-    {
-      opacity: 0,
-    },
-    { opacity: 1, duration: 5 }
-  )
-  .fromTo(
-    ".vision .circle.center",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".vision .future",
-    {
-      opacity: 0,
-    },
-    { opacity: 1, duration: 5 }
-  )
-  .fromTo(
-    ".vision .circleR .one",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".vision .circleR .two",
-    {
-      opacity: 0,
-      scale: 0,
-    },
-    { opacity: 1, scale: 1, duration: 3 }
-  )
-  .fromTo(
-    ".vision .middle .line",
-    {
-      width: "0px",
-    },
-    { width: "100%", duration: 25 },
-    0
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".vision",
-    start: "top top",
-    end: "30% top",
-    scrub: 2,
-    pin: true,
-  },
-});
+    //vision
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".vision",
+          start: "top 70%",
+          end: "top top",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".vision .circleL .one",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        { opacity: 1, scale: 1, duration: 3 }
+      )
+      .fromTo(
+        ".vision .circleL .two",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        { opacity: 1, scale: 1, duration: 3 }
+      )
+      .fromTo(
+        ".vision .now",
+        {
+          opacity: 0,
+        },
+        { opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".vision .circle.center",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        { opacity: 1, scale: 1, duration: 3 }
+      )
+      .fromTo(
+        ".vision .future",
+        {
+          opacity: 0,
+        },
+        { opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".vision .circleR .one",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        { opacity: 1, scale: 1, duration: 3 }
+      )
+      .fromTo(
+        ".vision .circleR .two",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        { opacity: 1, scale: 1, duration: 3 }
+      )
+      .fromTo(
+        ".vision .middle .line",
+        {
+          width: "0px",
+        },
+        { width: "100%", duration: 25 },
+        0
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".vision",
+        start: "top top",
+        end: "30% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
 
-//aboutMe
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".aboutMe",
-      start: "top 40%",
-      end: "50% top",
-      scrub: 2,
-    },
-  })
-  .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 3 })
-  .fromTo(
-    ".aboutMe .top li:first-child",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .top li:nth-child(2)",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .top li:last-child",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .middle li:first-child",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .middle li:last-child",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(1)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(2)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(3)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(4)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(5)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(6)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(7)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(8)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom ul li:nth-child(9)",
-    { opacity: 0 },
-    { opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".aboutMe .bottom .line",
-    { opacity: 0, width: "0px" },
-    { opacity: 1, width: "100%", duration: 25 },
-    10
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".aboutMe",
-    start: "top top",
-    end: "60% top",
-    scrub: 2,
-    pin: true,
-  },
-});
+    //aboutMe
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".aboutMe",
+          start: "top 40%",
+          end: "50% top",
+          scrub: 2,
+        },
+      })
+      .fromTo(".aboutMe .title", { opacity: 0 }, { opacity: 0.3, duration: 3 })
+      .fromTo(
+        ".aboutMe .top li:first-child",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .top li:nth-child(2)",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .top li:last-child",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .middle li:first-child",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .middle li:last-child",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(1)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(2)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(3)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(4)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(5)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(6)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(7)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(8)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom ul li:nth-child(9)",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".aboutMe .bottom .line",
+        { opacity: 0, width: "0px" },
+        { opacity: 1, width: "100%", duration: 25 },
+        10
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".aboutMe",
+        start: "top top",
+        end: "60% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
 
-//codingHard
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingHardF",
-      start: "top 60%",
-      end: "50% 10%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingHardF .web",
-    { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardF .title",
-    { opacity: 0, x: 50 },
-    { x: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(".codingHardF .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
-  .fromTo(
-    ".codingHardF .icon",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardF .button",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardF .image",
-    { opacity: 0, y: 500 },
-    { opacity: 1, y: 0, duration: 3 },
-    5
-  )
-  .fromTo(
-    ".codingHardF .image img",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 },
-    10
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingHardF",
-    start: "top top",
-    end: "60% top",
-    scrub: 2,
-    pin: true,
-  },
-});
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingHardS",
-      start: "top 60%",
-      end: "50% 10%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingHardS .web",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardS .title",
-    { opacity: 0, x: -50 },
-    { x: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(".codingHardS .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
-  .fromTo(
-    ".codingHardS .icon",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardS .button",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardS .image",
-    { opacity: 0, y: 500 },
-    { opacity: 1, y: 0, duration: 3 },
-    5
-  )
-  .fromTo(
-    ".codingHardS .image img",
-    { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3 },
-    10
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingHardS",
-    start: "top top",
-    end: "60% top",
-    scrub: 2,
-    pin: true,
-  },
-});
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingHardT",
-      start: "top 60%",
-      end: "50% 10%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingHardT .web",
-    { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardT .title",
-    { opacity: 0, x: 50 },
-    { x: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(".codingHardT .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
-  .fromTo(
-    ".codingHardT .icon",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardT .button",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardT .image",
-    { opacity: 0, y: 500 },
-    { opacity: 1, y: 0, duration: 3 },
-    5
-  )
-  .fromTo(
-    ".codingHardT .image img",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 },
-    10
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingHardT",
-    start: "top top",
-    end: "60% top",
-    scrub: 2,
-    pin: true,
-  },
-});
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingHardR",
-      start: "top 60%",
-      end: "50% 10%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingHardR .web",
-    { opacity: 0, x: 50 },
-    { opacity: 1, x: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardR .title",
-    { opacity: 0, x: -50 },
-    { x: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(".codingHardR .detail", { opacity: 0 }, { opacity: 1, duration: 3 })
-  .fromTo(
-    ".codingHardR .icon",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardR .button",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 3 }
-  )
-  .fromTo(
-    ".codingHardR .image",
-    { opacity: 0, y: 500 },
-    { opacity: 1, y: 0, duration: 3 },
-    5
-  )
-  .fromTo(
-    ".codingHardR .image img",
-    { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3 },
-    10
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingHardR",
-    start: "top top",
-    end: "60% top",
-    scrub: 2,
-    pin: true,
-  },
-});
+    //codingHard
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".codingHardF",
+          start: "top 60%",
+          end: "50% 10%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".codingHardF .web",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardF .title",
+        { opacity: 0, x: 50 },
+        { x: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardF .detail",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardF .icon",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardF .button",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardF .image",
+        { opacity: 0, y: 500 },
+        { opacity: 1, y: 0, duration: 3 },
+        5
+      )
+      .fromTo(
+        ".codingHardF .image img",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 },
+        10
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".codingHardF",
+        start: "top top",
+        end: "60% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".codingHardS",
+          start: "top 60%",
+          end: "50% 10%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".codingHardS .web",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardS .title",
+        { opacity: 0, x: -50 },
+        { x: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardS .detail",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardS .icon",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardS .button",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardS .image",
+        { opacity: 0, y: 500 },
+        { opacity: 1, y: 0, duration: 3 },
+        5
+      )
+      .fromTo(
+        ".codingHardS .image img",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 3 },
+        10
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".codingHardS",
+        start: "top top",
+        end: "60% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".codingHardT",
+          start: "top 60%",
+          end: "50% 10%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".codingHardT .web",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardT .title",
+        { opacity: 0, x: 50 },
+        { x: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardT .detail",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardT .icon",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardT .button",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardT .image",
+        { opacity: 0, y: 500 },
+        { opacity: 1, y: 0, duration: 3 },
+        5
+      )
+      .fromTo(
+        ".codingHardT .image img",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 },
+        10
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".codingHardT",
+        start: "top top",
+        end: "60% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".codingHardR",
+          start: "top 60%",
+          end: "50% 10%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".codingHardR .web",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardR .title",
+        { opacity: 0, x: -50 },
+        { x: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardR .detail",
+        { opacity: 0 },
+        { opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardR .icon",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardR .button",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 3 }
+      )
+      .fromTo(
+        ".codingHardR .image",
+        { opacity: 0, y: 500 },
+        { opacity: 1, y: 0, duration: 3 },
+        5
+      )
+      .fromTo(
+        ".codingHardR .image img",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 3 },
+        10
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".codingHardR",
+        start: "top top",
+        end: "60% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
 
-//codingClone
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".codingClone",
-      start: "top 60%",
-      end: "20% 10%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".codingClone .titleF",
-    { opacity: 0, x: -50 },
-    { opacity: 1, x: 0, duration: 3, "text-shadow": "5px 5px #faef5d" }
-  )
-  .fromTo(
-    ".codingClone .wrap > li:nth-child(1)",
-    { opacity: 0, y: 50 },
-    { y: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".codingClone .wrap > li:nth-child(2)",
-    { opacity: 0, y: 50 },
-    { y: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".codingClone .wrap > li:nth-child(3)",
-    { opacity: 0, y: 50 },
-    { y: 0, opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".codingClone .titleS",
-    { opacity: 0, x: 50 },
-    { x: 0, opacity: 1, duration: 3, "text-shadow": "5px 5px #faef5d" }
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".codingClone",
-    start: "top top",
-    end: "50% top",
-    scrub: 2,
-    pin: true,
+    //codingClone
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".codingClone",
+          start: "top 60%",
+          end: "20% 10%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".codingClone .titleF",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 3, "text-shadow": "5px 5px #faef5d" }
+      )
+      .fromTo(
+        ".codingClone .wrap > li:nth-child(1)",
+        { opacity: 0, y: 50 },
+        { y: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingClone .wrap > li:nth-child(2)",
+        { opacity: 0, y: 50 },
+        { y: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingClone .wrap > li:nth-child(3)",
+        { opacity: 0, y: 50 },
+        { y: 0, opacity: 1, duration: 3 }
+      )
+      .fromTo(
+        ".codingClone .titleS",
+        { opacity: 0, x: 50 },
+        { x: 0, opacity: 1, duration: 3, "text-shadow": "5px 5px #faef5d" }
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".codingClone",
+        start: "top top",
+        end: "50% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+
+    //project
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".project",
+          start: "top 80%",
+          end: "20% 60%",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".project .wrap > li",
+        { scale: 0, opacity: 0 },
+        { opacity: 1, duration: 3, scale: 1 }
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".project",
+        start: "top top",
+        end: "50% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+
+    //design
+    let list = gsap.utils.toArray(".design .list li");
+    let listA = gsap.utils.toArray(".design .list li.a");
+    let listB = gsap.utils.toArray(".design .list li.b");
+    let listC = gsap.utils.toArray(".design .list li.c");
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".design",
+          start: "top 80%",
+          end: "top top",
+          scrub: 2,
+        },
+      })
+      .fromTo(
+        ".design .title h2",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 2 }
+      )
+      .fromTo(
+        ".design .circle.one",
+        { opacity: 0, y: 50, x: 30 },
+        { opacity: 1, y: 0, x: 0, duration: 2 }
+      )
+      .fromTo(
+        ".design .circle.two",
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 2 }
+      )
+      .fromTo(
+        ".design .cross",
+        { opacity: 0, x: 50, rotate: 360 },
+        { opacity: 1, x: 0, rotate: 30, duration: 2 }
+      )
+      .fromTo(
+        ".design .circle.three",
+        { opacity: 0, y: 70 },
+        { opacity: 1, y: 0, duration: 2 }
+      )
+      .fromTo(".design .list", { opacity: 0 }, { opacity: 1, duration: 3 }, 5);
+    gsap.to(list, {
+      xPercent: -1550,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".design",
+        start: "center center",
+        end: "100% 0% ",
+        pin: true,
+        scrub: 5,
+      },
+    });
+    gsap.to(listA, {
+      rotation: 5,
+      scrollTrigger: {
+        trigger: ".design",
+        start: "center center",
+        end: "100% 0% ",
+        scrub: 2,
+      },
+    });
+    gsap.to(listB, {
+      rotation: 10,
+      scrollTrigger: {
+        trigger: ".design",
+        start: "center center",
+        end: "100% 0% ",
+        scrub: 2,
+      },
+    });
+    gsap.to(listC, {
+      rotation: -10,
+      scrollTrigger: {
+        trigger: ".design",
+        start: "center center",
+        end: "100% 0% ",
+        scrub: 2,
+      },
+    });
+
+    //video
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".video",
+          start: "top 80%",
+          end: "top top",
+          scrub: 5,
+        },
+      })
+      .fromTo(
+        ".video h2",
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+        }
+      )
+      .fromTo(
+        ".video video",
+        {
+          opacity: 0,
+          y: 50,
+        },
+        { opacity: 1, y: 0, duration: 2 }
+      );
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".video",
+        start: "top top",
+        end: "50% top",
+        scrub: 2,
+        pin: true,
+      },
+    });
+
+    //contact
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".contact",
+          start: "top 80%",
+          end: "top 40%",
+          scrub: 5,
+        },
+      })
+      .fromTo(
+        ".contact .top h2",
+        { opacity: 0, x: -500 },
+        { opacity: 1, x: 0, duration: 5 }
+      )
+      .fromTo(
+        ".contact .top .cross",
+        { rotation: 0, opacity: 0 },
+        { rotation: 180, opacity: 1, duration: 5 }
+      )
+      .fromTo(
+        ".contact .bottom .cross",
+        { rotation: 0, opacity: 0, x: -200, y: -200 },
+        { rotation: 135, opacity: 1, x: 0, y: 0, duration: 5 }
+      )
+      .fromTo(
+        ".contact .bottom .txt",
+        { opacity: 0, x: 500 },
+        { opacity: 1, x: 0, duration: 5 }
+      );
   },
+
+  "(max-width:750px)": function () {},
 });
 
 //project
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".project",
-      start: "top 80%",
-      end: "20% 60%",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".project .wrap > li",
-    { scale: 0, opacity: 0 },
-    { opacity: 1, duration: 3, scale: 1 }
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".project",
-    start: "top top",
-    end: "50% top",
-    scrub: 2,
-    pin: true,
-  },
-});
-
 projectSwipe();
 function projectSwipe() {
   roll = setInterval(function () {
@@ -615,7 +791,7 @@ function projectSwipe() {
         $(".project .wrap").css({ "margin-left": "0px" });
       });
     $(".project .nav .line").css("width", "0px");
-    $(".project .nav .line").stop().animate({ width: "70%" }, 3000);
+    $(".project .nav .line").stop().animate({ width: "50%" }, 3000);
   }, 3000);
 }
 $(".project .nav .play").on("click", function () {
@@ -648,115 +824,31 @@ $(".project .left").on("click", function () {
   projectSwipe();
 });
 
-//design
-let list = gsap.utils.toArray(".design .list li");
-let listA = gsap.utils.toArray(".design .list li.a");
-let listB = gsap.utils.toArray(".design .list li.b");
-let listC = gsap.utils.toArray(".design .list li.c");
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".design",
-      start: "top 80%",
-      end: "top top",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".design .title h2",
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 2 }
-  )
-  .fromTo(".design .list", { opacity: 0 }, { opacity: 1, duration: 1 }, 0);
-gsap.to(list, {
-  xPercent: -1550,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".design",
-    start: "center center",
-    end: "100% 0% ",
-    pin: true,
-    scrub: 5,
-  },
+// design
+$(".design .list li").on("click", function () {
+  let i = $(".design .list li").index(this);
+  $(".design .list_s").fadeIn(500);
+  $(".design .list_s").addClass("on");
+  $(".design .list_s li").eq(i).fadeIn(500);
+  $(".design .list_s li").eq(i).addClass("on");
+  $("body").addClass("hidden");
+  $("body").removeClass("xhidden");
 });
-gsap.to(listA, {
-  rotation: 5,
-  scrollTrigger: {
-    trigger: ".design",
-    start: "center center",
-    end: "100% 0% ",
-    scrub: 2,
-  },
-});
-gsap.to(listB, {
-  rotation: 10,
-  scrollTrigger: {
-    trigger: ".design",
-    start: "center center",
-    end: "100% 0% ",
-    scrub: 2,
-  },
-});
-gsap.to(listC, {
-  rotation: -10,
-  scrollTrigger: {
-    trigger: ".design",
-    start: "center center",
-    end: "100% 0% ",
-    scrub: 2,
-  },
+$(".design .close").on("click", function () {
+  $(".design .list_s").fadeOut(0);
+  $(".design .list_s li").fadeOut(0);
+  $(".design .list_s").removeClass("on");
+  $(".design .list_s li").removeClass("on");
+  $("body").removeClass("hidden");
+  $("body").addClass("xhidden");
 });
 
 //video
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".video",
-    start: "top top",
-    end: "50% top",
-    scrub: 2,
-    pin: true,
-  },
+$(".video .wrap li").on("mouseenter", function () {
+  $("li").not(this).addClass("mov");
+  $(this).addClass("on");
 });
-
-//contact
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".contact",
-      start: "top 80%",
-      end: "top top",
-      scrub: 5,
-    },
-  })
-  .fromTo(
-    ".contact .top h2",
-    { opacity: 0, x: -500 },
-    { opacity: 1, x: 0, duration: 5 }
-  )
-  .fromTo(
-    ".contact .top .cross",
-    { rotation: 0, opacity: 0 },
-    { rotation: 180, opacity: 1, duration: 5 }
-  )
-  .fromTo(
-    ".contact .bottom .cross",
-    { rotation: 0, opacity: 0, x: -200, y: -200 },
-    { rotation: 135, opacity: 1, x: 0, y: 0, duration: 5 }
-  )
-  .fromTo(
-    ".contact .bottom .txt",
-    { opacity: 0, x: 500 },
-    { opacity: 1, x: 0, duration: 5 }
-  );
-$(".design .list li").on("click", function () {
-  let i = $(".design .list li").index(this);
-  console.log(i);
-  $(".design .list_s").fadeIn(500);
-  $(".design .close").fadeIn(500);
-  $(".design .list_s li").eq(i).css("opacity", "1");
-});
-$(".design .close").on("click", function () {
-  $(".design .list_s").fadeOut(500);
-  $(".design .close").fadeOut(500);
-  $(".design .list_s li").css("opacity", "0");
+$(".video .wrap li").on("mouseleave", function () {
+  $(".video .wrap li").removeClass("mov");
+  $(".video .wrap li").removeClass("on");
 });
