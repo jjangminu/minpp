@@ -869,6 +869,22 @@ $(".design .list li").on("click", function () {
   $("body").addClass("hidden");
   $("body").removeClass("xhidden");
 });
+$(".design .list_s").on("click", function () {
+  $(".design .list_s").fadeOut(0);
+  $(".design .list_s li").fadeOut(0);
+  $(".design .list_s").removeClass("on");
+  $(".design .list_s li").removeClass("on");
+  $("body").removeClass("hidden");
+  $("body").addClass("xhidden");
+});
+$(".design .list_s li").on("click", function () {
+  $(".design .list_s").fadeOut(0);
+  $(".design .list_s li").fadeOut(0);
+  $(".design .list_s").removeClass("on");
+  $(".design .list_s li").removeClass("on");
+  $("body").removeClass("hidden");
+  $("body").addClass("xhidden");
+});
 $(".design .close").on("click", function () {
   $(".design .list_s").fadeOut(0);
   $(".design .list_s li").fadeOut(0);
