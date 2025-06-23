@@ -2350,17 +2350,15 @@ section {
   }
   /* aboutMe middle */
   .aboutMe .middle {
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     line-height: 1.5;
-    font-size: 0.7rem;
+    font-size: 1.2vw;
     width: 80%;
     justify-content: center;
   }
   .aboutMe .middle li {
     gap: 0.5rem;
     padding: 0rem;
-    min-width: 250px;
   }
   .aboutMe .middle h3 {
     font-size: 0.8rem;
@@ -2435,7 +2433,7 @@ section {
   }
   .codingClone .titleF,
   .codingClone .titleS {
-    font-size: 3rem;
+    font-size: 10vw;
     text-shadow: 3px 3px #faef5d;
   }
   /* codingClone wrap */
@@ -2449,10 +2447,10 @@ section {
   }
   /* codingClone detail */
   .codingClone .wrap .detail h3 {
-    font-size: 1.5rem;
+    font-size: 3vw;
   }
   .codingClone .wrap .detail p {
-    font-size: 0.7rem;
+    font-size: 1.7vw;
   }
 
   /* project */
