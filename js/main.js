@@ -23,7 +23,7 @@ let project = $("#project").offset().top;
 let design = $("#design").offset().top;
 let contact = $("#contact").offset().top;
 
-//header bat
+//header bar
 $("header .bar").on("click", function () {
   windowX = window.innerWidth;
   $("header .menu_circle").toggleClass("on");
@@ -40,6 +40,19 @@ $("header .bar").on("click", function () {
 $("header h1").on("click", function () {
   target = $("main .visual").offset().top;
   $("html").animate({ scrollTop: target });
+});
+$("header .menu").on("click", function () {
+  windowX = window.innerWidth;
+  $("header .menu_circle").toggleClass("on");
+  $("body").toggleClass("hidden");
+  $("body").toggleClass("xhidden");
+  $("header .menu").fadeToggle(500);
+  $("header .bar li").toggleClass("on");
+  if (windowX >= 800) {
+    $("header .menu").css("display", "flex");
+  } else {
+    $("header .menu").css("display", "block");
+  }
 });
 
 //현재 스크롤 위치 class
