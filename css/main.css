@@ -145,13 +145,13 @@ header .menu .middle {
 }
 header .menu .middle li {
   box-sizing: border-box;
-  padding: 1.5rem 0;
   width: 100%;
   transition: 0.5s;
   text-align: center;
 }
 header .menu .middle li a {
   display: block;
+  padding: 1.5rem 0;
 }
 header .menu .middle li:hover {
   background-color: #f9f9f9;
@@ -2267,11 +2267,11 @@ section {
   /* vision middle detail */
   .vision .middle .wrap h2 {
     height: 7vw;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .vision .middle .now p,
   .vision .middle .future p {
-    font-size: 1.7vw;
+    font-size: 1.5vw;
   }
   .vision .middle span {
     font-size: 2vw;
