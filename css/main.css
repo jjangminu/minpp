@@ -2524,10 +2524,10 @@ section {
   .design .list li > div {
     height: 40%;
     padding: 0.5rem;
-    font-size: 0.6rem;
+    font-size: 2vw;
   }
   .design .list h4 {
-    font-size: 1rem;
+    font-size: 3vw;
     margin-bottom: 0.2rem;
   }
   .design .list li::after {
